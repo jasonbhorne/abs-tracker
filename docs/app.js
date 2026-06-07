@@ -17,6 +17,7 @@ function render(d) {
   cards(d);
   correlation(d);
   teamTable(d);
+  challengerProfiles(d);
   umpTable(d);
   trendChart(d);
   playerTabs(d);
@@ -31,9 +32,9 @@ function cards(d) {
   const items = [
     [pct(L.rate), "of challenges overturned"],
     [L.per_team, "challenges per team"],
-    [best ? `${best.team.split(" ").pop()} ${pct(best.rate)}` : "—", "best team success rate"],
-    [mostU ? `${mostU.umpire.split(" ").pop()} ${pct(mostU.rate)}` : "—", "most-overturned umpire"],
-    [(d.correlation.win_pct.r ?? "—"), "success vs win% (r)"],
+    [best ? `${best.team.split(" ").pop()} ${pct(best.rate)}` : "-", "best team success rate"],
+    [mostU ? `${mostU.umpire.split(" ").pop()} ${pct(mostU.rate)}` : "-", "most-overturned umpire"],
+    [(d.correlation.win_pct.r ?? "-"), "success vs win% (r)"],
   ];
   const box = document.getElementById("cards");
   box.innerHTML = "";
@@ -133,9 +134,46 @@ function teamTable(d) {
     { key: "chal", label: "Challenges" },
     { key: "overturned", label: "Overturned" },
     { key: "rate", label: "Success Rate", cls: "rate", fmt: v => pct(v) },
-    { key: "win_pct", label: "Win%", fmt: v => v == null ? "—" : v.toFixed(3) },
-    { key: "era", label: "ERA", fmt: v => v == null ? "—" : v.toFixed(2) },
+    { key: "win_pct", label: "Win%", fmt: v => v == null ? "-" : v.toFixed(3) },
+    { key: "era", label: "ERA", fmt: v => v == null ? "-" : v.toFixed(2) },
   ], d.teams, { sortKey: "rate", rowClass: t => t.abbr === best ? "best" : t.abbr === worst ? "worst" : "" });
+}
+
+function challengerProfiles(d) {
+  const rl = d.role_league;
+  const tot = rl.batter.n + rl.catcher.n + rl.pitcher.n;
+  const share = r => tot ? Math.round(rl[r].n / tot * 100) : 0;
+  document.getElementById("role-read").innerHTML =
+    `Catchers do the most challenging and win most often (${pct(rl.catcher.rate)}), ` +
+    `batters are middle of the pack (${pct(rl.batter.rate)}), and pitchers rarely bother ` +
+    `and rarely win (${pct(rl.pitcher.rate)}). The robot rewards the players who see the zone best.`;
+  const rc = document.getElementById("role-cards");
+  rc.innerHTML = "";
+  [["Catchers", "catcher"], ["Batters", "batter"], ["Pitchers", "pitcher"]].forEach(([lbl, r]) => {
+    const c = el("div", "card");
+    c.append(el("div", "big", pct(rl[r].rate)),
+             el("div", "lbl", `${lbl}: ${share(r)}% of all challenges (${rl[r].n})`));
+    rc.append(c);
+  });
+
+  const roleCell = (p, r) => {
+    const x = p.roles[r];
+    return x.n ? `${x.n} <span class="pill">${pct(x.rate)}</span>` : '<span class="mut">-</span>';
+  };
+  const rows = d.challengers.map(p => ({
+    abbr: p.abbr, total: p.total,
+    bat: p.roles.batter.n, cat: p.roles.catcher.n, pit: p.roles.pitcher.n,
+    _p: p,
+    top: p.top ? `${p.top.name} <span class="pill">${p.top.role[0].toUpperCase()} · ${p.top.challenges}</span>` : "-",
+  }));
+  sortableTable("challenger-table", [
+    { key: "abbr", label: "Team", asc: true },
+    { key: "total", label: "Total" },
+    { key: "cat", label: "Catchers", fmt: (_, r) => roleCell(r._p, "catcher") },
+    { key: "bat", label: "Batters", fmt: (_, r) => roleCell(r._p, "batter") },
+    { key: "pit", label: "Pitchers", fmt: (_, r) => roleCell(r._p, "pitcher") },
+    { key: "top", label: "Most-active challenger", asc: true },
+  ], rows, { sortKey: "total" });
 }
 
 function umpTable(d) {

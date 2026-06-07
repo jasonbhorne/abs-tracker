@@ -187,8 +187,12 @@ def umpires(start, end):
 
 
 # --------------------------------------------------------------------------- #
+def id_to_abbr():
+    return {t["id"]: t.get("abbreviation") for t in fetch_json(TEAMS.format(s=SEASON))["teams"]}
+
+
 def get_standings():
-    id2abbr = {t["id"]: t.get("abbreviation") for t in fetch_json(TEAMS.format(s=SEASON))["teams"]}
+    id2abbr = id_to_abbr()
     teams = {}
     for rec in fetch_json(STANDINGS.format(s=SEASON)).get("records", []):
         for tr in rec.get("teamRecords", []):
@@ -255,6 +259,56 @@ def player_rows(kind):
     return sorted(rows, key=lambda x: -x["rate"])[:25]
 
 
+ROLES = ("batter", "catcher", "pitcher")
+
+
+def challenger_profiles(id2abbr):
+    """Per-team role split (batter/catcher/pitcher) + success rate, from the ledger,
+    plus the single most-active named challenger per team, from the player CSVs."""
+    # role split per team from the challenge ledger
+    agg = defaultdict(lambda: {r: [0, 0] for r in ROLES})  # abbr -> role -> [n, overturned]
+    league = {r: [0, 0] for r in ROLES}
+    for row in csv.DictReader(open(CHALLENGES_CSV)):
+        ab = id2abbr.get(int(row["challenge_team_id"])) if row["challenge_team_id"] else None
+        role = row["challenger_type"]
+        if not ab or role not in ROLES:
+            continue
+        ov = 1 if str(row["is_overturned"]).lower() == "true" else 0
+        agg[ab][role][0] += 1
+        agg[ab][role][1] += ov
+        league[role][0] += 1
+        league[role][1] += ov
+
+    # most-active named challenger per team across the three player CSVs
+    top = {}  # abbr -> {name, role, challenges, rate}
+    for role in ROLES:
+        path = os.path.join(LATEST, f"{role}.csv")
+        if not os.path.exists(path):
+            continue
+        for r in csv.DictReader(open(path, encoding="utf-8-sig")):
+            ab = r["team_abbr"]
+            n = int(f(r.get("n_challenges", 0)))
+            cur = top.get(ab)
+            if not cur or n > cur["challenges"]:
+                top[ab] = {"name": r["entity_name"], "role": role, "challenges": n,
+                           "rate": f(r.get("rate_overturns", 0))}
+
+    profiles = []
+    for ab, roles in agg.items():
+        total = sum(roles[r][0] for r in ROLES)
+        prof = {"abbr": ab, "total": total,
+                "roles": {r: {"n": roles[r][0], "overturned": roles[r][1],
+                              "rate": (roles[r][1] / roles[r][0] if roles[r][0] else 0.0)}
+                          for r in ROLES},
+                "top": top.get(ab)}
+        profiles.append(prof)
+    profiles.sort(key=lambda x: -x["total"])
+    league_summary = {r: {"n": league[r][0], "overturned": league[r][1],
+                          "rate": (league[r][1] / league[r][0] if league[r][0] else 0.0)}
+                      for r in ROLES}
+    return profiles, league_summary
+
+
 def league_trend():
     if not os.path.exists(TEAM_TS_CSV):
         return []
@@ -273,7 +327,9 @@ def league_trend():
 def build_json():
     teams = team_rows()
     umps = umpire_rows()
+    id2abbr = id_to_abbr()
     standings = get_standings()
+    profiles, role_league = challenger_profiles(id2abbr)
     tot_c = sum(t["chal"] for t in teams)
     tot_o = sum(t["overturned"] for t in teams)
 
@@ -306,6 +362,8 @@ def build_json():
         "players": {k: player_rows(k) for k in ("batter", "catcher", "pitcher")},
         "correlation": corr,
         "trend": league_trend(),
+        "challengers": profiles,
+        "role_league": role_league,
     }
     out = os.path.join(DOCS, "data.json")
     with open(out, "w") as fh:
