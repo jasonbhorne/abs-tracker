@@ -1,0 +1,39 @@
+name: Daily ABS update
+
+on:
+  schedule:
+    # 11:00 UTC = 7:00am ET. Runs after the prior day's games are Final.
+    - cron: "0 11 * * *"
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: abs-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate dashboard data
+        run: python3 update.py --days 3
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "abs-tracker-bot"
+          git config user.email "actions@github.com"
+          git add data/ docs/data.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Daily ABS update $(date -u +%Y-%m-%d)"
+            git push
+          fi

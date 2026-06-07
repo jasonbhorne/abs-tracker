@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MLB ABS Challenge Tracker</title>
+<meta name="description" content="Tracking MLB Automated Ball-Strike (ABS) challenge outcomes: umpire overturn rates, team challenge success, and whether it correlates with winning.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>MLB ABS Challenge Tracker</h1>
+    <p class="sub">The 2026 Automated Ball-Strike challenge system, by the numbers. Who wins their challenges, which umpires get overturned, and whether any of it tracks with winning.</p>
+    <p class="updated" id="updated">Loading…</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="cards" class="cards"></section>
+
+  <section class="panel">
+    <h2>Does challenge skill track with winning?</h2>
+    <p class="lede" id="corr-read"></p>
+    <div class="corr-grid">
+      <div class="chart-box"><canvas id="scatter"></canvas></div>
+      <div id="corr-stats" class="corr-stats"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Teams</h2>
+    <p class="lede">Challenges made and the share overturned in the team's favor. Sortable. Best and worst rates (min <span class="minteam"></span> challenges) are highlighted.</p>
+    <div class="table-scroll"><table id="team-table"></table></div>
+  </section>
+
+  <section class="panel">
+    <h2>Umpires</h2>
+    <p class="lede">Overturn rate = the share of challenged calls that were reversed. A high rate means more of that umpire's challenged calls were wrong. Read with care: it also reflects how selectively teams challenged that crew.
+      <label class="toggle"><input type="checkbox" id="ump-alln"> show all umpires (incl. low sample)</label></p>
+    <div class="table-scroll"><table id="ump-table"></table></div>
+  </section>
+
+  <section class="panel">
+    <h2>League overturn rate over time</h2>
+    <p class="lede">Builds as the season accumulates. One point per snapshot day.</p>
+    <div class="chart-box wide"><canvas id="trend"></canvas></div>
+  </section>
+
+  <section class="panel">
+    <h2>Players</h2>
+    <p class="lede">Top challenge success (min 5 challenges).</p>
+    <div class="tabs" id="player-tabs">
+      <button data-k="batter" class="active">Batters</button>
+      <button data-k="catcher">Catchers</button>
+      <button data-k="pitcher">Pitchers</button>
+    </div>
+    <div class="table-scroll"><table id="player-table"></table></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Data: <a href="https://baseballsavant.mlb.com/leaderboard/abs-challenges">Baseball Savant</a> (team &amp; player aggregates) and the <a href="https://statsapi.mlb.com">MLB Stats API</a> (per-game challenges joined to the home-plate umpire, plus standings/ERA). Umpire figures are built independently; Savant does not publish a per-umpire leaderboard.</p>
+    <p>Updated daily via GitHub Actions. Source: <a href="https://github.com/jasonbhorne/abs-tracker">github.com/jasonbhorne/abs-tracker</a>. Not affiliated with MLB.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

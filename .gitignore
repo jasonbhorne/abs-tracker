@@ -1,0 +1,5 @@
+# transient snapshot CSVs (regenerated each run; only data.json is committed)
+data/latest/
+__pycache__/
+*.pyc
+.DS_Store
