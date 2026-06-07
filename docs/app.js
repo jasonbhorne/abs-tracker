@@ -4,6 +4,20 @@ const el = (t, c, h) => { const e = document.createElement(t); if (c) e.classNam
 
 let DATA = null;
 
+// --- iframe embed support -------------------------------------------------- #
+// ?embed=1 slims the chrome; the page reports its height so a parent iframe can
+// auto-resize (no inner scrollbar). Height messages carry no sensitive data.
+const EMBED = new URLSearchParams(location.search).get("embed") === "1";
+if (EMBED) document.documentElement.classList.add("embed");
+function postHeight() {
+  if (window.parent === window) return;
+  const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+  window.parent.postMessage({ absTrackerHeight: h }, "*");
+}
+if (window.ResizeObserver) new ResizeObserver(postHeight).observe(document.body);
+window.addEventListener("load", () => { postHeight(); setTimeout(postHeight, 500); });
+window.addEventListener("resize", postHeight);
+
 fetch("data.json?t=" + Date.now())
   .then(r => r.json())
   .then(d => { DATA = d; render(d); })
@@ -21,6 +35,8 @@ function render(d) {
   umpTable(d);
   trendChart(d);
   playerTabs(d);
+  postHeight();
+  setTimeout(postHeight, 300);
 }
 
 function cards(d) {

@@ -60,6 +60,12 @@ tr.worst td.rate{color:var(--worst)}
 footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--mut);font-size:13px}
 footer p{margin:6px 0}
 
+/* slim mode for iframe embedding: hide hero + footer, tighten spacing */
+html.embed body{background:transparent}
+html.embed header,html.embed footer{display:none}
+html.embed main{padding:6px 0 18px}
+html.embed .wrap{padding:0 12px}
+
 @media(max-width:720px){
   .corr-grid{grid-template-columns:1fr}
   header h1{font-size:24px}
