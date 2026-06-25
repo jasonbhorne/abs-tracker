@@ -4906,3 +4906,67 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 823210,2026-06-23,49f15a88-7818-391d-b478-1d4087480774,Quinn Wolcott,133,catcher,False,False,0.0008317311161441104,6,bottom,1,2,Ball
 823210,2026-06-23,1c9bb5e0-f321-34c1-8899-51b768103ecc,Quinn Wolcott,137,batter,True,False,0.03566811780954904,6,bottom,2,2,Strike
 823210,2026-06-23,a020c0e8-c1b5-3673-88f3-448b98ecdfad,Quinn Wolcott,137,batter,True,True,0.10028417816777181,7,bottom,2,1,Ball
+823850,2026-06-24,df0a14a8-c59b-3b66-9c9d-beb05e9a7520,James Jean,146,catcher,False,True,0.016835451527413184,8,top,1,2,Strike
+823850,2026-06-24,41ab2a75-e750-3c30-91ac-df1e64d887ed,James Jean,146,batter,True,False,0.007028095225260156,7,bottom,2,2,Strike
+823613,2026-06-24,24d2f4d4-9f5b-3e70-88b1-09ee1beafcfc,Austin Jones,112,batter,True,False,0.03468286736981098,8,top,1,0,Strike
+823613,2026-06-24,080c3023-e6c9-3b0e-b084-de7de4cd1fe5,Austin Jones,121,batter,True,False,0.018191524574071583,6,bottom,2,0,Strike
+823613,2026-06-24,6962c3bf-2996-3001-89d4-cc04df9f6754,Austin Jones,112,catcher,False,True,0.10600431452499803,6,bottom,2,0,Strike
+823613,2026-06-24,0297dbc6-2f08-3116-8c2a-9953a6bd3f0b,Austin Jones,121,batter,True,False,0.02706729330951485,9,bottom,1,1,Strike
+823611,2026-06-24,6f10be7d-5050-37c7-9b73-f93c503aa3ca,Stu Scheurwater,121,catcher,False,True,0.1364236249390599,5,top,2,2,Strike
+823611,2026-06-24,c9b14f29-0ee0-3c25-ac34-ca00bc9f9fa0,Stu Scheurwater,121,catcher,False,False,0.0029455785400965967,8,top,0,0,Ball
+824583,2026-06-24,4f433948-eb73-3b36-b958-ddb74e709b0d,Tripp Gibson,145,batter,True,True,0.3039530110666282,3,bottom,1,0,Ball
+824583,2026-06-24,10e7e36e-23e3-3e03-8a1a-be996ffef5b0,Tripp Gibson,114,catcher,False,False,0.1716260752624319,4,bottom,0,0,Ball
+824583,2026-06-24,c8abd8bb-8b9a-3767-a889-9d4e2a011b90,Tripp Gibson,145,batter,True,False,0.1561772160330479,9,bottom,3,2,Strike
+824583,2026-06-24,5d87a1d8-ee93-393c-bac8-d606f5afacaa,Tripp Gibson,114,catcher,False,False,0.16087431841548905,10,bottom,2,1,Ball
+824341,2026-06-24,4621ae0d-9530-303d-9723-67f3f45eb037,Brennan Miller,111,batter,True,True,0.1343549336840788,6,top,0,0,Ball
+824341,2026-06-24,f438bcf3-28f3-3d77-a106-102852237bdc,Brennan Miller,115,catcher,False,False,0.05263675038476691,6,top,1,2,Ball
+824341,2026-06-24,3974cefc-8a83-3c59-a94d-0d3efcb04ac3,Brennan Miller,111,batter,True,True,0.13483970708430504,9,top,0,0,Ball
+824341,2026-06-24,b4de0807-1c59-32b1-beb2-450068fdefb6,Brennan Miller,115,batter,True,False,0.17812086291446838,2,bottom,2,2,Strike
+824341,2026-06-24,8e557f99-ab47-3e87-909f-bde590fad54f,Brennan Miller,111,catcher,False,False,0.034482462668205,7,bottom,1,2,Ball
+824018,2026-06-24,a3736c4a-fee3-36ed-8fd9-a3e601edf658,James Hoye,108,catcher,False,True,0.0891381675968177,8,top,2,1,Strike
+824018,2026-06-24,67ac5f66-de50-3d74-9d72-110f91184601,James Hoye,108,batter,True,False,0.15557844268012289,1,bottom,1,0,Strike
+824018,2026-06-24,d62f36ba-4c20-3566-b821-d1dde6ec58d8,James Hoye,110,catcher,False,True,0.07027544208635572,3,bottom,2,2,Strike
+824018,2026-06-24,d744c33d-8a42-3b34-bc53-c747371e98a2,James Hoye,108,batter,True,True,0.0367092476953912,7,bottom,3,2,Ball
+824018,2026-06-24,d03af98a-d8d4-353f-b5c5-f0c9c423ee7c,James Hoye,110,catcher,False,True,0.20715234582060438,8,bottom,2,0,Strike
+824018,2026-06-24,cc4b8ac5-a273-3977-bff5-bc17f4a0b355,James Hoye,108,batter,True,True,0.051822149497694495,8,bottom,2,1,Ball
+823367,2026-06-24,580577d1-fa7f-3c1d-9683-59ace1d7e9f2,Vic Carapazza,134,catcher,False,True,0.21658019763639524,7,top,1,2,Strike
+823367,2026-06-24,53a84b0c-eb81-389c-b50e-2009cda929a5,Vic Carapazza,136,batter,True,True,0.14940721853570038,7,top,0,2,Ball
+823367,2026-06-24,638d1d7e-0c73-3c58-b308-5f3024771cd4,Vic Carapazza,136,catcher,False,True,0.05184571756005163,1,bottom,0,0,Strike
+823367,2026-06-24,940c5692-a7b6-395a-a6ba-4daa094189f2,Vic Carapazza,136,catcher,False,True,0.0850997673383107,4,bottom,3,2,Strike
+822965,2026-06-24,9cfb3f0a-5470-37a0-b80a-9146e51de85a,Mike Muchlinski,139,catcher,False,True,0.1558031086852325,4,top,2,2,Strike
+822965,2026-06-24,d5642a13-454b-3215-852e-21113b4ca251,Mike Muchlinski,118,batter,True,False,0.15407012296733047,5,top,1,1,Strike
+822965,2026-06-24,f73aeca2-e4aa-34f1-9775-560f27857502,Mike Muchlinski,139,catcher,False,True,0.13266409116698386,9,top,1,1,Strike
+822965,2026-06-24,b0d744ea-2a5f-335f-b9be-52e2b347c1ce,Mike Muchlinski,139,batter,True,True,0.05264198904204055,3,bottom,0,0,Ball
+822965,2026-06-24,b35fcd2e-8b62-3ee1-bf11-a2167fb12d43,Mike Muchlinski,118,catcher,False,True,0.01702431299119922,4,bottom,2,2,Strike
+822965,2026-06-24,ccdbe41f-5bff-35e9-8b7b-c9f175ddd7e5,Mike Muchlinski,118,catcher,False,True,0.006525736801211601,6,bottom,0,0,Strike
+822965,2026-06-24,07a83928-92b7-3b7d-9766-2ad9e4c57ad4,Mike Muchlinski,139,batter,True,False,0.05311750288453887,6,bottom,0,2,Strike
+824259,2026-06-24,53ef1ae0-5911-329e-8ac5-682a2ae1de85,Alan Porter,116,catcher,False,False,0.03497058056186332,6,top,2,2,Ball
+824259,2026-06-24,bb12b692-0d9e-31c9-b513-9ac3fdde7de8,Alan Porter,116,batter,True,False,0.16416537867426517,9,bottom,0,2,Strike
+822719,2026-06-24,358d6a75-b8f5-3a09-b8c4-3fafda000211,Adam Beck,143,batter,True,False,0.04873337624875285,2,top,1,1,Strike
+822719,2026-06-24,4a5d1029-1d67-3763-aa85-dbb331c6558e,Adam Beck,143,batter,True,False,0.082125829244442,5,top,3,1,Strike
+822719,2026-06-24,0eb94553-6e02-34af-9a23-f6c21a97c095,Adam Beck,120,catcher,False,False,0.41412638889413256,9,top,2,2,Ball
+822719,2026-06-24,4bb7e2d6-40a3-36d0-806d-a1d7bc27c730,Adam Beck,143,catcher,False,True,0.19128511723119135,1,bottom,0,0,Strike
+822719,2026-06-24,ef5f10e0-8e31-3684-9f70-93a129bad83f,Adam Beck,120,batter,True,False,0.3190233182379083,1,bottom,1,0,Strike
+822798,2026-06-24,26c97812-6396-3e9b-926f-b8daa001f7f1,Chad Whitson,141,catcher,False,True,0.19901229861832037,4,top,0,0,Strike
+822798,2026-06-24,715a1f7a-7da2-355b-85e2-e81fc504ef0e,Chad Whitson,141,batter,True,False,0.3036620858577257,3,bottom,2,2,Strike
+822798,2026-06-24,638a2bce-b191-30c8-8b94-43ca709ca372,Chad Whitson,141,batter,True,False,0.06872836383342451,4,bottom,1,1,Strike
+822798,2026-06-24,d5f9a223-c5f7-3d97-a5b0-62fc32a7ad2a,Chad Whitson,117,catcher,False,False,0.09307957526847611,8,bottom,1,1,Ball
+822798,2026-06-24,5e46e424-f1bb-34ed-9e3e-567ada4aabde,Chad Whitson,117,catcher,False,True,0.03289291383712156,9,bottom,1,2,Strike
+824500,2026-06-24,ac89f077-0c4f-3aef-9bf0-5948af8037c6,Adam Hamari,113,batter,True,True,0.0797228590821606,2,bottom,0,0,Ball
+824500,2026-06-24,96c0131e-fc98-3c60-a7f2-32fd424d5ce0,Adam Hamari,113,batter,True,False,0.11795078950377658,2,bottom,0,2,Strike
+824500,2026-06-24,343a5636-a61b-3431-a315-9e7897c0b7f3,Adam Hamari,158,catcher,False,False,0.12685460186967895,9,bottom,3,2,Ball
+823691,2026-06-24,30496975-2538-3bee-990c-a75998443ad8,Ryan Additon,119,batter,True,False,0.10959656474203416,7,top,3,1,Strike
+823691,2026-06-24,b41fd9e5-8a0d-3e44-8a41-10d887fa6f49,Ryan Additon,142,catcher,False,True,0.019748563591954538,7,top,3,2,Strike
+823691,2026-06-24,9c5a16e1-c39d-3de8-b4a8-254d0b90cec7,Ryan Additon,142,catcher,False,False,0.07675369083875651,9,top,0,1,Ball
+823691,2026-06-24,949bdb6f-b14d-3e88-b066-13b4c61fc285,Ryan Additon,119,pitcher,False,True,0.023733406159072823,2,bottom,1,1,Strike
+823691,2026-06-24,f54004ef-2684-38d4-8b46-0fdb27b1be54,Ryan Additon,142,batter,True,False,0.11975395786395016,3,bottom,2,2,Strike
+823691,2026-06-24,d2af9e53-df62-37ff-a8da-d774fb73ed72,Ryan Additon,142,batter,True,True,2.061968584567142e-05,5,bottom,0,0,Ball
+823691,2026-06-24,6cc8f401-0c2b-38e6-8dee-f265fd684df9,Ryan Additon,119,catcher,False,True,0.04669810581435696,7,bottom,3,1,Strike
+823041,2026-06-24,6f92b4cc-7f6f-3dc5-af8a-a517705a6438,Bruce Dreckman,138,catcher,False,True,0.21464454329766225,1,top,0,0,Strike
+823041,2026-06-24,9ef05bcc-751b-308b-9d00-341247565686,Bruce Dreckman,109,catcher,False,False,0.098458797424148,1,bottom,2,2,Ball
+823208,2026-06-24,cd09a0ad-5acd-3a0f-be01-c308ba655767,Ramon De Jesus,137,catcher,False,True,0.13477626181847857,2,top,2,1,Strike
+823208,2026-06-24,131c3223-b9c4-31eb-a997-6d540efc9f7b,Ramon De Jesus,137,catcher,False,True,0.0516827129372871,7,top,0,0,Strike
+823208,2026-06-24,1fd22715-85f2-32a7-a9d8-c5de6108b95f,Ramon De Jesus,137,catcher,False,True,0.023578620725122415,7,top,2,2,Strike
+823208,2026-06-24,8a6459bd-1285-3dfe-85f1-acbb0486b815,Ramon De Jesus,137,catcher,False,False,0.039069948716226724,9,top,1,1,Ball
+823208,2026-06-24,f20f74b0-8492-30c2-b323-aa150c4c167c,Ramon De Jesus,133,catcher,False,True,0.027174863159468376,5,bottom,0,1,Strike
+823208,2026-06-24,f8a51092-887d-3ad7-b78c-7014ba8f7f1b,Ramon De Jesus,133,catcher,False,True,0.019412008593421737,8,bottom,0,0,Strike
