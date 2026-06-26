@@ -4970,3 +4970,35 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 823208,2026-06-24,8a6459bd-1285-3dfe-85f1-acbb0486b815,Ramon De Jesus,137,catcher,False,False,0.039069948716226724,9,top,1,1,Ball
 823208,2026-06-24,f20f74b0-8492-30c2-b323-aa150c4c167c,Ramon De Jesus,133,catcher,False,True,0.027174863159468376,5,bottom,0,1,Strike
 823208,2026-06-24,f8a51092-887d-3ad7-b78c-7014ba8f7f1b,Ramon De Jesus,133,catcher,False,True,0.019412008593421737,8,bottom,0,0,Strike
+822961,2026-06-25,0b292d81-8c9d-3833-8d1e-7a68e6afc04f,Emil Jimenez,139,batter,True,True,0.25910349268714594,2,bottom,3,0,Ball
+822961,2026-06-25,d878f881-2720-3f34-84af-44dfbc7b36db,Emil Jimenez,118,catcher,False,False,0.06428164471588528,4,bottom,3,2,Ball
+822961,2026-06-25,60499ede-f1ad-3734-81bc-6e84a0fe1453,Emil Jimenez,139,batter,True,False,0.15160006916248947,7,bottom,0,2,Strike
+823366,2026-06-25,5afb15d8-8885-349f-9c8b-67bce0d3b05a,Edwin Moscoso,134,catcher,False,False,0.014881735947928423,9,top,2,2,Ball
+823366,2026-06-25,0df6fe7b-422b-3cbd-8e6c-7a5d6210add4,Edwin Moscoso,134,batter,True,False,0.2389362602360241,7,bottom,0,2,Strike
+823366,2026-06-25,69f33896-4b69-395e-8411-8220abd8ec08,Edwin Moscoso,136,catcher,False,False,0.005803898434501478,8,bottom,0,0,Ball
+823209,2026-06-25,4a77f61b-842f-3a74-ac22-8f853f8c03ac,Paul Clemons,133,batter,True,False,0.04644466943308467,2,top,0,0,Strike
+823209,2026-06-25,2296fccb-24bf-3fae-b1e4-4a25ea82fcbc,Paul Clemons,133,batter,True,True,0.031745797916350474,9,top,3,1,Ball
+823209,2026-06-25,ce31b301-3b02-363d-aaf9-249c00d7609c,Paul Clemons,133,catcher,False,True,0.056498922303875126,6,bottom,0,1,Strike
+823209,2026-06-25,ae21a653-52b1-3a5d-bf40-8fcd92fcfc57,Paul Clemons,137,batter,True,True,0.01415297675145212,7,bottom,3,2,Ball
+823209,2026-06-25,1860d3d6-b4b3-3403-ab4a-c6650248fc65,Paul Clemons,133,catcher,False,True,0.051348910009992546,7,bottom,0,0,Strike
+824258,2026-06-25,7a3ec254-90d9-3990-b88f-1f3f140e53c8,Ryan Wills,116,catcher,False,True,0.1600174806638398,1,top,0,0,Strike
+824258,2026-06-25,33ed4888-98c8-30cd-af2c-dc26024a4bbd,Ryan Wills,117,batter,True,False,0.14477898545646684,2,top,3,2,Strike
+824258,2026-06-25,cf1b810a-914a-3fd7-aefd-bae97b500da3,Ryan Wills,116,batter,True,True,0.14048339172368096,1,bottom,0,2,Ball
+824258,2026-06-25,629430f1-4f32-32f1-a2a7-71967bf0413c,Ryan Wills,116,batter,True,False,0.06728286767176594,4,bottom,0,0,Strike
+824258,2026-06-25,d364b0d0-2764-35f6-a5b5-a68e72894bb5,Ryan Wills,116,batter,True,False,0.014850844943089372,7,bottom,2,2,Strike
+822717,2026-06-25,7fc480a5-b53a-37c1-8a8f-23383df64346,Louie Krupa,143,batter,True,False,0.024183059999933865,5,top,1,0,Strike
+822717,2026-06-25,61cf83aa-7885-3d0b-92a1-d091376267da,Louie Krupa,143,batter,True,True,0.31786484934671644,6,top,2,1,Ball
+822717,2026-06-25,a53a0856-ac24-3f73-847b-696e50f1423b,Louie Krupa,120,catcher,False,False,0.08873552899823502,6,top,0,1,Ball
+822797,2026-06-25,ffa52d82-2abe-3c53-a37d-978fa5a7fe8c,Roberto Ortiz,141,catcher,False,True,0.1806836617518338,1,top,0,0,Strike
+822797,2026-06-25,e86da47e-5a0a-3020-9996-ed2e7471cce9,Roberto Ortiz,141,batter,True,True,0.10158589655503171,5,bottom,2,1,Ball
+822797,2026-06-25,c4f507db-3e11-37e5-9220-be5ac7b0df8c,Roberto Ortiz,140,catcher,False,False,0.09806407976842747,6,bottom,0,0,Ball
+822797,2026-06-25,1983eccf-13a2-30ca-937c-4a359c3ed90d,Roberto Ortiz,140,catcher,False,True,0.1885170508601416,7,bottom,1,2,Strike
+823612,2026-06-25,1c42ed10-a7c0-359e-a387-f0cac89b888a,Jordan Baker,121,catcher,False,True,0.08724014000322522,6,top,1,0,Strike
+823612,2026-06-25,cf3a2ffd-54a6-3978-8959-c42ff94eecbc,Jordan Baker,112,catcher,False,False,0.18682018453661464,3,bottom,2,1,Ball
+823612,2026-06-25,0607c745-c833-356e-95c2-e3e0becf4831,Jordan Baker,121,batter,True,True,0.046585522768673795,3,bottom,0,0,Ball
+823612,2026-06-25,3ab4966d-d024-3b50-ac10-f49e76417c0a,Jordan Baker,121,batter,True,False,0.19426177864463023,4,bottom,1,0,Strike
+823612,2026-06-25,86a78598-e704-395c-ac44-94614584cebe,Jordan Baker,121,batter,True,False,0.14732946537615643,9,bottom,1,0,Strike
+823612,2026-06-25,7ff62ae1-1631-364e-90bb-eedf89d3874f,Jordan Baker,112,catcher,False,False,0.0037828787613065767,9,bottom,2,1,Ball
+824747,2026-06-25,8f5e2954-1e90-37b2-bcaf-75e076197b47,Todd Tichenor,111,catcher,False,False,0.10809265776995926,2,top,2,1,Ball
+824747,2026-06-25,8ffb2df0-0823-374a-a867-d5934d95562f,Todd Tichenor,111,catcher,False,False,0.14666156975923272,7,top,2,2,Ball
+824747,2026-06-25,b8391187-88f2-3056-a3de-a636abe6d10b,Todd Tichenor,147,batter,True,True,0.08220932695787718,7,top,0,0,Ball
