@@ -5373,3 +5373,31 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 824985,2026-07-01,f714b1d0-edcc-3187-9e6c-6cc06a08db54,Tom Hanahan,119,batter,True,True,0.11908612461118552,8,top,2,0,Ball
 824985,2026-07-01,2bd31ee2-17bd-3c03-8c21-f650df1e892d,Tom Hanahan,133,catcher,False,True,0.1373044174951512,8,top,1,1,Strike
 825064,2026-07-01,fac0062f-f90b-3510-a027-d78d034d2089,Nick Mahrley,137,batter,True,False,0.028325560495116475,3,top,3,2,Strike
+823442,2026-07-02,e8298e4a-57c9-39a5-ac7d-19d2f9660f63,Jansen Visconti,143,catcher,False,True,0.10698973168527559,4,top,2,1,Strike
+823442,2026-07-02,214e3eff-dcae-3144-b70a-7e0a96a8eff6,Jansen Visconti,143,catcher,False,False,0.05311756179274353,8,top,1,1,Ball
+823442,2026-07-02,8b8273e6-84e0-3ce0-851b-faef968ffc44,Jansen Visconti,143,batter,True,False,0.053210821262832386,1,bottom,1,0,Strike
+823442,2026-07-02,842d8942-af5b-3069-aea5-6188c9d32088,Jansen Visconti,143,batter,True,True,0.1591809143064007,3,bottom,0,0,Ball
+823442,2026-07-02,220471a2-10aa-343e-88bf-8321e989525e,Jansen Visconti,143,batter,True,True,0.05720848986506645,4,bottom,1,0,Ball
+823442,2026-07-02,11c70202-bc22-3a6c-b21d-10174280c9b3,Jansen Visconti,134,catcher,False,False,0.0527741677239877,7,bottom,0,0,Ball
+823765,2026-07-02,2f1be386-f601-328a-a39c-838f8dd8a5ab,Dan Merzel,158,catcher,False,True,0.017778387817540375,3,top,2,0,Strike
+823765,2026-07-02,3dc4dec9-25c8-3f00-897b-210525930a5f,Dan Merzel,158,catcher,False,False,0.07388143858766529,7,top,0,1,Ball
+823765,2026-07-02,7db172ee-797b-334c-9eba-2f7a5e32b41b,Dan Merzel,113,batter,True,True,0.02434263731255938,7,top,1,1,Ball
+823765,2026-07-02,77db5080-291c-3b25-b79b-964528c45c8c,Dan Merzel,113,batter,True,False,0.009203564634727268,7,top,2,1,Strike
+823765,2026-07-02,35853484-36e9-3f71-82e8-4fe80fab5c17,Dan Merzel,113,catcher,False,True,0.004604072889297067,8,bottom,3,2,Strike
+824335,2026-07-02,4a3ccc18-10bb-32ed-90d9-2136e090b0fb,Ramon De Jesus,146,batter,True,False,0.13312573459606214,1,top,0,0,Strike
+824335,2026-07-02,e1fecc8a-8627-3b52-bda5-8d5225f98e41,Ramon De Jesus,115,catcher,False,False,0.12443964582737312,5,top,2,2,Ball
+824335,2026-07-02,3eb7dab7-65e2-3e8b-ad61-c0753d1fabea,Ramon De Jesus,146,batter,True,False,0.015598291969030509,9,top,1,2,Strike
+824416,2026-07-02,2396d4db-191b-3b79-8bdd-a6fc3488d8b6,Vic Carapazza,114,catcher,False,False,0.17851031354149804,2,top,0,0,Ball
+824416,2026-07-02,f959e49c-8beb-3c6a-beb2-a36b61425f88,Vic Carapazza,145,catcher,False,False,0.2900684865487321,3,bottom,2,1,Ball
+824906,2026-07-02,cc50a7d9-b599-3943-a2dc-49f24512d43a,Alan Porter,144,catcher,False,True,0.07786095563741058,5,top,3,1,Strike
+824906,2026-07-02,83a0dbd5-ac9e-3c8b-9aa7-de93dce32d84,Alan Porter,144,catcher,False,True,0.07329544293256118,8,top,0,1,Strike
+824906,2026-07-02,f21ada24-360f-3734-b891-05e6b7b7f8dc,Alan Porter,144,batter,True,False,0.06168291376927848,7,bottom,1,0,Strike
+824906,2026-07-02,db00c07a-5c88-3caf-a004-4ff7bb961f9e,Alan Porter,138,catcher,False,False,0.22321081403130827,8,bottom,2,2,Ball
+822884,2026-07-02,31e22967-718e-3dd2-9dad-263542169387,Willie Traynor,116,catcher,False,True,0.03332431774303257,2,bottom,2,1,Strike
+822884,2026-07-02,06ae3eee-e99a-308d-be76-cab97b53fe39,Willie Traynor,116,catcher,False,True,0.03483779463325887,6,bottom,0,0,Strike
+823119,2026-07-02,479bdb01-005d-39ba-8dd3-19b687b4c54c,Charlie Ramos,108,batter,True,False,0.0401998671964543,3,top,1,2,Strike
+823119,2026-07-02,90349bbe-d337-3101-ac88-2f5498b537ab,Charlie Ramos,108,batter,True,False,0.0296029741330609,6,top,1,2,Strike
+823119,2026-07-02,8f4da9be-d1c1-31be-b8e2-82387ab635c7,Charlie Ramos,136,catcher,False,True,0.06625263425771521,8,top,0,1,Strike
+823935,2026-07-02,6985b03d-3470-3dc9-9a36-d8ce82d08ca1,Ben May,119,catcher,False,False,0.11135669172558095,2,top,2,0,Ball
+823935,2026-07-02,4c8309f0-bf5d-3267-9982-a7631e22fe55,Ben May,135,batter,True,False,0.1050071875280798,9,top,3,0,Strike
+823935,2026-07-02,69280c26-ec75-31c0-97aa-0e8aacfe0365,Ben May,135,catcher,False,True,0.1040762572648366,1,bottom,0,0,Strike
