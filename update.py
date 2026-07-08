@@ -309,6 +309,37 @@ def challenger_profiles(id2abbr):
     return profiles, league_summary
 
 
+def inning_rows():
+    """Challenge volume and success by inning; innings 10+ bucket as extras."""
+    agg = defaultdict(lambda: {"n": 0, "ovr": 0, "batter_n": 0, "batter_ovr": 0,
+                               "def_n": 0, "def_ovr": 0})
+    for r in csv.DictReader(open(CHALLENGES_CSV)):
+        try:
+            inn = int(float(r["inning"]))
+        except (TypeError, ValueError):
+            continue
+        a = agg[min(inn, 10)]
+        ov = 1 if str(r["is_overturned"]).lower() == "true" else 0
+        a["n"] += 1
+        a["ovr"] += ov
+        side = "batter" if r["challenger_type"] == "batter" else "def"
+        a[side + "_n"] += 1
+        a[side + "_ovr"] += ov
+    total = sum(a["n"] for a in agg.values())
+    out = []
+    for k in sorted(agg):
+        a = agg[k]
+        out.append({"inning": ("10+" if k == 10 else k),
+                    "challenges": a["n"], "overturned": a["ovr"],
+                    "rate": (a["ovr"] / a["n"] if a["n"] else 0.0),
+                    "share": (a["n"] / total if total else 0.0),
+                    "batter_n": a["batter_n"],
+                    "batter_rate": (a["batter_ovr"] / a["batter_n"]) if a["batter_n"] else None,
+                    "def_n": a["def_n"],
+                    "def_rate": (a["def_ovr"] / a["def_n"]) if a["def_n"] else None})
+    return out
+
+
 def league_trend():
     if not os.path.exists(TEAM_TS_CSV):
         return []
@@ -364,6 +395,7 @@ def build_json():
         "trend": league_trend(),
         "challengers": profiles,
         "role_league": role_league,
+        "innings": inning_rows(),
     }
     out = os.path.join(DOCS, "data.json")
     with open(out, "w") as fh:

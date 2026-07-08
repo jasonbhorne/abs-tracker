@@ -32,6 +32,7 @@ function render(d) {
   correlation(d);
   teamTable(d);
   challengerProfiles(d);
+  inningsSection(d);
   umpTable(d);
   trendChart(d);
   playerTabs(d);
@@ -190,6 +191,43 @@ function challengerProfiles(d) {
     { key: "pit", label: "Pitchers", fmt: (_, r) => roleCell(r._p, "pitcher") },
     { key: "top", label: "Most-active challenger", asc: true },
   ], rows, { sortKey: "total" });
+}
+
+function inningsSection(d) {
+  const inn = d.innings || [];
+  if (!inn.length) { document.getElementById("inning-panel").style.display = "none"; return; }
+  const reg = inn.filter(i => i.inning !== "10+");
+  const ninth = reg.find(i => i.inning === 9);
+  const sum = a => a.reduce((s, i) => s + i.challenges, 0);
+  const rate = a => { const n = sum(a); return n ? a.reduce((s, i) => s + i.overturned, 0) / n : 0; };
+  const early = reg.filter(i => i.inning <= 3), late = reg.filter(i => i.inning >= 7);
+  document.getElementById("inning-read").innerHTML =
+    `Teams challenge more as the game goes on, and get worse at it: ${pct(rate(early))} of challenges ` +
+    `in innings 1&ndash;3 are overturned versus ${pct(rate(late))} in innings 7&ndash;9.` +
+    (ninth ? ` The 9th is the busiest and least successful inning of all (${ninth.challenges.toLocaleString()} challenges, ` +
+      `${pct(ninth.rate)} overturned): challenges saved for the biggest moments get spent on calls that were probably right.` : "");
+  charts.innings?.destroy();
+  charts.innings = new Chart(document.getElementById("innings"), {
+    data: {
+      labels: inn.map(i => i.inning === "10+" ? "Extras" : "Inn " + i.inning),
+      datasets: [
+        { type: "bar", label: "Challenges", data: inn.map(i => i.challenges), backgroundColor: "rgba(88,166,255,.45)", yAxisID: "y", order: 2 },
+        { type: "line", label: "Success rate", data: inn.map(i => +(i.rate * 100).toFixed(1)), borderColor: "#f0883e", backgroundColor: "#f0883e", tension: .25, yAxisID: "y1", order: 1 },
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: "#8b97a6" } },
+        tooltip: { callbacks: { label: c => c.dataset.yAxisID === "y1" ? `${c.parsed.y}% overturned` : `${c.parsed.y} challenges` } }
+      },
+      scales: {
+        y: { position: "left", title: { display: true, text: "Challenges", color: "#8b97a6" }, ticks: { color: "#8b97a6" }, grid: { color: "#26303d" } },
+        y1: { position: "right", title: { display: true, text: "% overturned", color: "#8b97a6" }, ticks: { color: "#8b97a6", callback: v => v + "%" }, grid: { display: false }, suggestedMin: 30, suggestedMax: 65 },
+        x: { ticks: { color: "#8b97a6" }, grid: { display: false } }
+      }
+    }
+  });
 }
 
 function umpTable(d) {
