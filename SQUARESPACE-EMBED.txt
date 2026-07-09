@@ -1,0 +1,24 @@
+================================================================
+ABS CHALLENGE TRACKER - SQUARESPACE EMBED
+Paste this ONCE into the Code Block on the abs-challenge-tracker
+page, replacing the old iframe. Auto-resizes to fit, so no inner
+scrollbar and nothing gets cut off.
+================================================================
+
+---------------- COPY FROM HERE ----------------
+<iframe
+  id="abs-tracker-frame"
+  src="https://jasonbhorne.github.io/abs-tracker/"
+  title="ABS Challenge Tracker"
+  style="width:1px;min-width:100%;border:0;display:block;min-height:800px;"
+  scrolling="no"
+  loading="lazy"></iframe>
+<script>
+  window.addEventListener("message", function (e) {
+    if (e.data && e.data.absTracker && e.data.height) {
+      document.getElementById("abs-tracker-frame").style.height =
+        e.data.height + "px";
+    }
+  });
+</script>
+---------------- COPY TO HERE ----------------
