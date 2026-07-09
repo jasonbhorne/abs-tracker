@@ -1,23 +1,25 @@
 ================================================================
 ABS CHALLENGE TRACKER - SQUARESPACE EMBED
 Paste this ONCE into the Code Block on the abs-challenge-tracker
-page, replacing the old iframe. Auto-resizes to fit, so no inner
-scrollbar and nothing gets cut off.
+page. The ?embed=1 flag hides the tracker's own header/footer
+(your Squarespace intro text serves as the header) and the page
+reports its height, so the iframe auto-resizes with no inner
+scrollbar.
 ================================================================
 
 ---------------- COPY FROM HERE ----------------
 <iframe
   id="abs-tracker-frame"
-  src="https://jasonbhorne.github.io/abs-tracker/"
+  src="https://jasonbhorne.github.io/abs-tracker/?embed=1"
   title="ABS Challenge Tracker"
   style="width:1px;min-width:100%;border:0;display:block;min-height:800px;"
   scrolling="no"
   loading="lazy"></iframe>
 <script>
   window.addEventListener("message", function (e) {
-    if (e.data && e.data.absTracker && e.data.height) {
+    if (e.data && e.data.absTrackerHeight) {
       document.getElementById("abs-tracker-frame").style.height =
-        e.data.height + "px";
+        e.data.absTrackerHeight + "px";
     }
   });
 </script>
