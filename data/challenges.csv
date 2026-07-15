@@ -6034,3 +6034,5 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 823274,2026-07-12,96465731-2a9c-3e52-b422-836eae07c141,Jen Pawol,141,catcher,False,False,0.02121720054540223,4,bottom,1,2,Ball
 823274,2026-07-12,144c8c7b-812e-32ee-9fc4-8b117c3d502e,Jen Pawol,141,catcher,False,True,0.14171356268328483,4,bottom,2,2,Strike
 823274,2026-07-12,4d75ace8-2382-3638-ab04-7d26ef59d52b,Jen Pawol,135,batter,True,True,0.09504550812402303,8,bottom,0,0,Ball
+823443,2026-07-14,fbed1972-e0ab-3954-9f86-6946643c66ca,Alan Porter,159,batter,True,False,0.017966139982735108,8,top,0,2,Strike
+823443,2026-07-14,7e070eb2-1c35-30c1-97b3-8294d346646e,Alan Porter,160,batter,True,False,0.240987596759634,6,bottom,2,1,Strike
