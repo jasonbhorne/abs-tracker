@@ -6036,3 +6036,7 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 823274,2026-07-12,4d75ace8-2382-3638-ab04-7d26ef59d52b,Jen Pawol,135,batter,True,True,0.09504550812402303,8,bottom,0,0,Ball
 823443,2026-07-14,fbed1972-e0ab-3954-9f86-6946643c66ca,Alan Porter,159,batter,True,False,0.017966139982735108,8,top,0,2,Strike
 823443,2026-07-14,7e070eb2-1c35-30c1-97b3-8294d346646e,Alan Porter,160,batter,True,False,0.240987596759634,6,bottom,2,1,Strike
+823440,2026-07-16,5c7f9f8f-dd71-3508-9a01-7dcfe5492e86,Dan Iassogna,121,batter,True,False,0.02430331336139513,5,top,2,1,Strike
+823440,2026-07-16,4fbae610-53e3-30c5-a5bd-3c4caf8d1a6f,Dan Iassogna,121,catcher,False,True,0.20201922012803486,4,bottom,0,0,Strike
+823440,2026-07-16,69d66a77-503f-30d3-a680-44e84e7bf3cf,Dan Iassogna,121,catcher,False,False,0.07527217317898872,5,bottom,2,2,Ball
+823440,2026-07-16,58a564f0-29e6-3ab2-bda4-dab238497454,Dan Iassogna,143,batter,True,False,0.051289106072928026,5,bottom,3,2,Strike
