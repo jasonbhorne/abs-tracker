@@ -34,7 +34,21 @@ main{padding:26px 0 60px}
 .chart-box{position:relative;height:300px}
 .chart-box.wide{height:320px}
 
-.table-scroll{overflow-x:auto}
+/* Horizontal scroll with edge shadows so it is obvious the table continues.
+   The "local" layers scroll away at each edge, uncovering the "scroll" shadow. */
+.table-scroll{
+  overflow-x:auto;
+  background-image:
+    linear-gradient(to right,var(--panel),rgba(22,27,34,0)),
+    linear-gradient(to left,var(--panel),rgba(22,27,34,0)),
+    linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0)),
+    linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0));
+  background-position:left center,right center,left center,right center;
+  background-repeat:no-repeat;
+  background-size:26px 100%,26px 100%,13px 100%,13px 100%;
+  background-attachment:local,local,scroll,scroll;
+}
+.swipe{display:none;color:var(--mut);font-size:12.5px;margin:0 0 8px}
 table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}
 th,td{text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
@@ -60,14 +74,47 @@ tr.worst td.rate{color:var(--worst)}
 footer{border-top:1px solid var(--line);padding:24px 0 50px;color:var(--mut);font-size:13px}
 footer p{margin:6px 0}
 
+/* Calls to action. The embedded view hides the header and footer, so without
+   these the iframe is a dead end: no way back to the rest of the site. */
+.cta-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
+  background:#141d2b;border:1px solid var(--line);border-left:3px solid var(--blue);
+  border-radius:10px;padding:12px 16px;margin:0 0 22px;font-size:14px}
+.cta-bar .cta-txt{color:var(--mut)}
+.cta-bar nav{display:flex;flex-wrap:wrap;gap:8px 16px;margin-left:auto}
+.cta-bar nav a{font-weight:600;white-space:nowrap}
+
+.cta-end{background:linear-gradient(160deg,#152232,#131a24);
+  border:1px solid var(--line);border-radius:14px;padding:22px;margin:26px 0 0}
+.cta-end h2{margin:0 0 6px;font-size:19px}
+.cta-end p{margin:0 0 14px;color:var(--mut);font-size:14.5px;max-width:640px}
+.cta-links{display:flex;flex-wrap:wrap;gap:10px}
+.cta-links a{display:inline-block;padding:9px 15px;border-radius:8px;font-size:14px;
+  border:1px solid var(--line);background:#1f2733;font-weight:600}
+.cta-links a:hover{text-decoration:none;border-color:var(--blue)}
+.cta-links a.primary{background:var(--blue);color:#04121f;border-color:var(--blue)}
+
 /* slim mode for iframe embedding: hide hero + footer, tighten spacing */
 html.embed body{background:transparent}
 html.embed header,html.embed footer{display:none}
 html.embed main{padding:6px 0 18px}
 html.embed .wrap{padding:0 12px}
+/* Standalone page keeps its own header/footer nav, so the top bar is
+   redundant there; it only earns its space inside the embed. */
+.cta-bar{display:none}
+html.embed .cta-bar{display:flex}
 
 @media(max-width:720px){
   .corr-grid{grid-template-columns:1fr}
   header h1{font-size:24px}
   .card .big{font-size:24px}
+
+  /* Reclaim horizontal room for the tables: on a 390px phone the old padding
+     ate 68px (18% of the screen) before a single column was drawn. */
+  .wrap{padding:0 10px}
+  html.embed .wrap{padding:0 8px}
+  .panel{padding:16px 12px 18px;border-radius:12px}
+  .swipe{display:block}
+  table{font-size:13px}
+  th,td{padding:8px 7px}
+  .cta-bar{flex-direction:column;align-items:flex-start;gap:10px}
 }

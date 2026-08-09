@@ -20,6 +20,15 @@
 <main class="wrap">
   <section id="cards" class="cards"></section>
 
+  <div class="cta-bar">
+    <span class="cta-txt">Built by Jason Horne.</span>
+    <nav>
+      <a href="https://jasonhorne.org/blog/abs-challenge-tracker">Why I built this</a>
+      <a href="https://jasonhorne.org/sports">More sports data</a>
+      <a href="https://jasonhorne.org/#newsletter">Get updates</a>
+    </nav>
+  </div>
+
   <section class="panel">
     <h2>Does challenge skill track with winning?</h2>
     <p class="lede" id="corr-read"></p>
@@ -32,6 +41,7 @@
   <section class="panel">
     <h2>Teams</h2>
     <p class="lede">Challenges made and the share overturned in the team's favor. Sortable. Best and worst rates (min <span class="minteam"></span> challenges) are highlighted.</p>
+    <p class="swipe">Swipe the table sideways to see every column.</p>
     <div class="table-scroll"><table id="team-table"></table></div>
   </section>
 
@@ -40,6 +50,7 @@
     <p class="lede" id="role-read"></p>
     <div class="role-cards" id="role-cards"></div>
     <p class="lede">Per team: how challenges split across batters, catchers, and pitchers (count and success rate each), and the team's most-active challenger. Sortable.</p>
+    <p class="swipe">Swipe the table sideways to see every column.</p>
     <div class="table-scroll"><table id="challenger-table"></table></div>
   </section>
 
@@ -53,6 +64,7 @@
     <h2>Umpires</h2>
     <p class="lede">Overturn rate = the share of challenged calls that were reversed. A high rate means more of that umpire's challenged calls were wrong. Read with care: it also reflects how selectively teams challenged that crew.
       <label class="toggle"><input type="checkbox" id="ump-alln"> show all umpires (incl. low sample)</label></p>
+    <p class="swipe">Swipe the table sideways to see every column.</p>
     <div class="table-scroll"><table id="ump-table"></table></div>
   </section>
 
@@ -70,7 +82,19 @@
       <button data-k="catcher">Catchers</button>
       <button data-k="pitcher">Pitchers</button>
     </div>
+    <p class="swipe">Swipe the table sideways to see every column.</p>
     <div class="table-scroll"><table id="player-table"></table></div>
+  </section>
+
+  <section class="cta-end">
+    <h2>Made it this far?</h2>
+    <p>I write about school leadership, data, and AI, and I build tools like this one on the side. The write-up below explains what the challenge data actually shows and why the umpire numbers need care.</p>
+    <div class="cta-links">
+      <a class="primary" href="https://jasonhorne.org/blog/abs-challenge-tracker">Read the write-up</a>
+      <a href="https://jasonhorne.org/sports">More sports projects</a>
+      <a href="https://jasonhorne.org/#newsletter">Get updates by email</a>
+      <a href="https://jasonhorne.org">jasonhorne.org</a>
+    </div>
   </section>
 </main>
 
@@ -78,6 +102,7 @@
   <div class="wrap">
     <p>Data: <a href="https://baseballsavant.mlb.com/leaderboard/abs-challenges">Baseball Savant</a> (team &amp; player aggregates) and the <a href="https://statsapi.mlb.com">MLB Stats API</a> (per-game challenges joined to the home-plate umpire, plus standings/ERA). Umpire figures are built independently; Savant does not publish a per-umpire leaderboard.</p>
     <p>Updated daily via GitHub Actions. Source: <a href="https://github.com/jasonbhorne/abs-tracker">github.com/jasonbhorne/abs-tracker</a>. Not affiliated with MLB.</p>
+    <p>Built by <a href="https://jasonhorne.org">Jason Horne</a> &middot; <a href="https://jasonhorne.org/blog/abs-challenge-tracker">the write-up</a> &middot; <a href="https://jasonhorne.org/sports">more sports projects</a></p>
   </div>
 </footer>
 
