@@ -8192,3 +8192,74 @@ game_pk,date,play_id,hp_umpire,challenge_team_id,challenger_type,is_batter,is_ov
 824153,2026-08-20,eee4ed7d-1cc6-359f-9496-63fb98b3bd6b,Lance Barrett,117,catcher,False,True,0.1748156745528875,5,top,0,0,Strike
 824153,2026-08-20,51e751fe-0f52-30ab-ae6c-6ffc2669d76d,Lance Barrett,117,batter,True,False,0.008847272768807257,4,bottom,1,0,Strike
 824153,2026-08-20,ced1bb82-93f4-368d-8da8-140ef402eb81,Lance Barrett,108,catcher,False,False,0.06129657679569668,9,bottom,1,0,Ball
+823746,2026-08-21,0163ba82-2159-3684-b59a-70cd46369fbe,Todd Tichenor,158,catcher,False,True,0.09891361705966384,4,top,0,0,Strike
+823746,2026-08-21,1fb3c45e-8111-3a95-bfbb-2e10d6bc039e,Todd Tichenor,144,batter,True,False,0.08327455511040727,5,top,1,1,Strike
+823746,2026-08-21,bdadf65d-3f40-3d06-9121-38a985f2b7c5,Todd Tichenor,158,batter,True,False,0.011231326834162059,6,bottom,2,2,Strike
+823746,2026-08-21,33e07702-40e1-3292-a64d-5b7903c237bf,Todd Tichenor,158,batter,True,False,0.1530186830436242,7,bottom,0,2,Strike
+823420,2026-08-21,d46d8368-8214-3902-af20-411c297b166b,Erich Bacchus,143,batter,True,False,0.04282723973985658,6,bottom,3,2,Strike
+823420,2026-08-21,ca5b56d5-e119-3dd1-b21b-4916035b81fa,Erich Bacchus,143,batter,True,False,0.01705740651741916,7,bottom,0,1,Strike
+823510,2026-08-21,d866482d-7deb-38b9-ba01-3f378b4ac203,Adam Beck,141,batter,True,True,0.1789808551268124,1,top,1,0,Ball
+823510,2026-08-21,e2b00a22-0eaa-38b2-b3e0-0f93fb462a90,Adam Beck,147,catcher,False,False,0.034566612358165286,6,top,0,2,Ball
+823510,2026-08-21,17bf4752-0075-360b-b052-6512aac1d50b,Adam Beck,141,catcher,False,False,0.2205504250084418,2,bottom,2,1,Ball
+823510,2026-08-21,96da1af6-f278-3d94-8ea1-15b7577f2209,Adam Beck,141,catcher,False,True,0.00926457410603998,6,bottom,3,2,Strike
+824721,2026-08-21,dd9fda6a-1ede-3ad5-86f0-eb2a10d48f01,John Libka,111,pitcher,False,True,0.1743064835742727,2,top,2,1,Strike
+824721,2026-08-21,fde4856d-5a5f-390d-b35d-c6c03c01f8d7,John Libka,111,catcher,False,True,0.03503548278674773,2,top,2,0,Strike
+824721,2026-08-21,c8439cf5-d6ac-3e75-87a9-a82c6834040d,John Libka,137,batter,True,False,0.02369621593342275,3,top,2,2,Strike
+824721,2026-08-21,722a625b-dc8d-3e73-98ea-7375eb359215,John Libka,111,catcher,False,True,0.11489911125267582,9,top,3,1,Strike
+824721,2026-08-21,bdc938c9-0548-3d89-8075-ae337bc95189,John Libka,137,catcher,False,False,0.09135085167141034,3,bottom,0,0,Ball
+823830,2026-08-21,79a569e0-bd1d-3e36-addb-b4bf27ca9ac8,Rob Drake,120,batter,True,False,0.027104523775219103,2,top,0,0,Strike
+823830,2026-08-21,294d676f-c267-349e-a2fa-c62d97470098,Rob Drake,120,batter,True,True,0.055036612739627136,3,top,1,2,Ball
+823830,2026-08-21,3f5c62aa-0e28-321d-982a-a2b895f4c77a,Rob Drake,146,catcher,False,False,0.01439857563074999,3,top,2,2,Ball
+823830,2026-08-21,2f3fadc3-c8b2-3f51-9d4e-f236c14777f8,Rob Drake,146,catcher,False,True,0.08679021376644669,5,top,0,1,Strike
+823830,2026-08-21,137e7e2e-9353-3d11-810a-389f4ec7d80d,Rob Drake,120,catcher,False,True,0.09402314144230395,3,bottom,3,2,Strike
+823830,2026-08-21,5bbd5642-f2bc-38e5-be1a-0f92275de4ef,Rob Drake,120,catcher,False,False,0.28425140583767505,4,bottom,1,1,Ball
+823830,2026-08-21,7471b645-9da1-391e-97a1-5f771ebe583f,Rob Drake,146,batter,True,True,0.07637898010198364,6,bottom,2,1,Ball
+824800,2026-08-21,04e1088b-64b9-3585-b24f-b377579cf04d,Vic Carapazza,110,catcher,False,True,0.03068846620917587,7,top,1,1,Strike
+824559,2026-08-21,6c8bd902-926a-33a1-83c0-fa0ad45a8ef7,Ramon De Jesus,145,catcher,False,True,0.517147933694805,2,top,0,1,Strike
+824559,2026-08-21,e022ec43-4f73-3738-a436-28ba22154b6e,Ramon De Jesus,145,catcher,False,False,0.022501528665515372,2,top,0,2,Ball
+824559,2026-08-21,11de8f9c-7039-34cb-b692-051df5a5950f,Ramon De Jesus,121,batter,True,True,0.22187173996850018,4,top,0,1,Ball
+824559,2026-08-21,171dfa99-f970-3f38-b0eb-10c19bbe8983,Ramon De Jesus,121,catcher,False,False,0.05003198265726984,4,bottom,0,0,Ball
+824559,2026-08-21,1c44a2f6-36e0-3836-a100-d49834cd1b51,Ramon De Jesus,121,catcher,False,True,0.07659805152394905,4,bottom,0,0,Strike
+824559,2026-08-21,43b78010-ec33-35b9-8845-0fd23b6874cc,Ramon De Jesus,145,batter,True,True,0.07269049740870838,6,bottom,2,2,Ball
+824072,2026-08-21,145c6067-fc94-39a5-8d96-5b9deeac4796,Scott Barry,118,catcher,False,False,0.043339774919848875,9,top,3,0,Ball
+824072,2026-08-21,5efd31c9-6c48-3687-9560-fdf8245d5b3c,Scott Barry,116,catcher,False,False,0.18643953303720662,4,bottom,1,1,Ball
+824152,2026-08-21,8260e39e-3be2-3976-94ee-404bd30de55a,Jonathan Parra,117,catcher,False,True,0.02371384706465418,3,top,3,0,Strike
+824152,2026-08-21,f7465739-04ed-3d40-ad85-bd667dfdc3f8,Jonathan Parra,133,catcher,False,True,0.05404010362094169,1,bottom,1,2,Strike
+824152,2026-08-21,96c2c55f-4d2e-3089-b5b6-b913d6c61f44,Jonathan Parra,133,catcher,False,True,0.031692350852023043,1,bottom,0,0,Strike
+824152,2026-08-21,cbf8037d-b62c-322e-91a7-9f0881c50168,Jonathan Parra,117,batter,True,False,0.13570510006977365,8,bottom,0,0,Strike
+822857,2026-08-21,1496cb4a-ade2-3e2e-93bc-0f712bdf52d6,Andy Fletcher,140,pitcher,False,True,0.024603869854824545,1,top,3,2,Strike
+822857,2026-08-21,ee3a9db4-b211-3675-8856-469f12052639,Andy Fletcher,108,batter,True,False,0.16462711706132227,5,top,1,2,Strike
+822857,2026-08-21,b33e3f85-7955-306b-9551-e6d3e93b4ecb,Andy Fletcher,140,batter,True,True,0.03899119427696608,5,bottom,0,1,Ball
+822857,2026-08-21,9829a067-d025-3a3f-9d94-e209ef99457b,Andy Fletcher,108,catcher,False,True,0.031305907698291335,9,bottom,2,1,Strike
+822857,2026-08-21,3844e512-2e4c-3a90-bffc-05d2303acc8d,Andy Fletcher,140,batter,True,False,0.09289118608993108,9,bottom,2,2,Strike
+822857,2026-08-21,ce4f4355-c36a-3500-9aac-c5818d15e35a,Andy Fletcher,140,batter,True,False,0.2190740606144228,10,bottom,0,1,Strike
+824317,2026-08-21,ae7c29d3-aeeb-3ec2-9bd9-01002900374c,Nate Tomlinson,114,catcher,False,False,0.10710284859886605,1,bottom,0,0,Ball
+824317,2026-08-21,286c8b7d-e3e3-3d81-ba79-cf4723be5de1,Nate Tomlinson,115,batter,True,False,0.16696020112465293,8,bottom,0,2,Strike
+824317,2026-08-21,db2c067e-959e-3026-ab34-8edc58b2cba2,Nate Tomlinson,114,catcher,False,True,0.028145726150176187,9,bottom,0,0,Strike
+825045,2026-08-21,51bb978f-6647-30de-a5a7-6a5d75d49a13,Dan Bellino,109,catcher,False,True,0.02582337941103341,6,top,2,0,Strike
+825045,2026-08-21,03c13b4a-aeaa-34e1-9d3b-f5a0c0e57ee6,Dan Bellino,109,catcher,False,True,0.16508175271808911,7,top,2,2,Strike
+825045,2026-08-21,4077ffaf-5933-3eba-989b-7057fca7e137,Dan Bellino,113,batter,True,True,0.3054021743309757,8,top,3,2,Ball
+825045,2026-08-21,80b829dd-2071-3ae9-b1d2-ab920d898d11,Dan Bellino,113,catcher,False,True,0.15118522772915755,2,bottom,0,0,Strike
+825045,2026-08-21,456703b0-62cd-3b71-8ccd-ddb98f69bd59,Dan Bellino,113,catcher,False,False,0.048451603174030314,6,bottom,0,1,Ball
+825045,2026-08-21,a66eecb4-18f7-36a7-bb13-2a7f09d843b9,Dan Bellino,113,catcher,False,True,0.062025726567384254,7,bottom,1,2,Strike
+823262,2026-08-21,5fe54a53-a931-3a54-8dc4-8a30aca90d58,Brian Walsh,135,catcher,False,False,0.14933040948173115,9,top,2,1,Ball
+823262,2026-08-21,c0db1d4e-8483-3849-b118-17f074f62823,Brian Walsh,142,catcher,False,True,0.0520711047282993,6,bottom,0,1,Strike
+823911,2026-08-21,884fe8b6-9fe0-3e16-a663-5984b51219a8,Malachi Moore,134,batter,True,False,0.00852052568400774,3,top,0,0,Strike
+823911,2026-08-21,48ce6e85-4374-3fe2-a96a-26a858da4a55,Malachi Moore,119,catcher,False,True,0.1504695836485027,3,top,2,2,Strike
+823911,2026-08-21,a2942103-c7b5-30d5-ab97-fafefdca8f84,Malachi Moore,119,catcher,False,True,0.07882357600993228,3,top,0,0,Strike
+823911,2026-08-21,9ec7cc6e-2060-36b9-bbc0-6763ed6392b0,Malachi Moore,119,catcher,False,True,0.03963939858768584,5,top,1,2,Strike
+823911,2026-08-21,d55b2325-276a-3c4a-8152-8218427359a1,Malachi Moore,119,catcher,False,False,0.008517586765965715,7,top,2,1,Ball
+823911,2026-08-21,4c957daf-92de-3d64-ba62-f61fef40293f,Malachi Moore,119,batter,True,True,0.006222365809349553,3,bottom,0,0,Ball
+823911,2026-08-21,0dd25bad-f802-3f8b-97e8-cf56c5240563,Malachi Moore,134,catcher,False,True,0.021896197082557634,5,bottom,0,2,Strike
+823911,2026-08-21,e4d9a057-fd8f-3b1a-a6d6-af3695152b48,Malachi Moore,119,batter,True,True,0.008784315503223797,7,bottom,2,1,Ball
+823911,2026-08-21,47bca513-679f-360e-b75c-c58885cc715a,Malachi Moore,119,batter,True,False,0.027312655724210932,8,bottom,1,0,Strike
+823911,2026-08-21,4f25bf9a-de12-3851-962e-70f37ad418aa,Malachi Moore,134,catcher,False,False,0.03544335687854773,8,bottom,2,2,Ball
+823911,2026-08-21,ab00bc2b-8409-34ac-b9cd-919afecdf4ba,Malachi Moore,134,catcher,False,False,0.14535157975217128,10,bottom,2,2,Ball
+823101,2026-08-21,81fe2880-2876-32b2-881b-415ecf4ca75f,Brennan Miller,136,catcher,False,True,0.14782022380543836,1,top,1,2,Strike
+823101,2026-08-21,dcae18f8-86d6-31dd-ac97-c4f2960bd625,Brennan Miller,136,catcher,False,False,0.004651870342378253,8,top,1,0,Ball
+823101,2026-08-21,68d5c6d2-8223-310a-94f5-5eb685b7d574,Brennan Miller,136,catcher,False,True,0.10628176304009285,8,top,2,0,Strike
+823101,2026-08-21,f36be8cc-7473-33e1-97b0-583d26049d3e,Brennan Miller,112,batter,True,False,0.17804225979195887,9,top,0,0,Strike
+823101,2026-08-21,27c17fe9-6d19-3b5a-b053-f6074a12f7d0,Brennan Miller,136,catcher,False,True,0.10889274756584155,10,top,1,0,Strike
+823101,2026-08-21,b4f65a3c-5ffb-3735-8c47-b454aa0864ab,Brennan Miller,112,catcher,False,False,0.02095328935480069,7,bottom,1,2,Ball
+823101,2026-08-21,f74d2728-3406-326f-9be1-7b84d2fbf979,Brennan Miller,112,catcher,False,True,0.21654518547204837,8,bottom,3,2,Strike
+823101,2026-08-21,9b520ce1-53a3-3367-8161-8ac255276907,Brennan Miller,136,batter,True,False,0.10345499571878047,9,bottom,0,0,Strike
