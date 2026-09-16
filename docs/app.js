@@ -18,18 +18,69 @@ if (window.ResizeObserver) new ResizeObserver(postHeight).observe(document.body)
 window.addEventListener("load", () => { postHeight(); setTimeout(postHeight, 500); });
 window.addEventListener("resize", postHeight);
 
+let SCOPE = "regular";
+
 fetch("data.json?t=" + Date.now())
   .then(r => r.json())
-  .then(d => { DATA = d; render(d); })
+  .then(d => { DATA = d; initScopes(); })
   .catch(e => { document.getElementById("updated").textContent = "Failed to load data.json"; console.error(e); });
+
+// --- regular season / postseason toggle ------------------------------------ #
+// The ledger tags every challenge with its MLB gameType, so each scope is a real
+// filter rather than a date guess. A scope with no games yet renders as disabled.
+function initScopes() {
+  const bar = document.getElementById("scope-bar");
+  const wrap = document.getElementById("scope-toggle");
+  const order = ["regular", "postseason"];
+  const avail = DATA.available || ["regular"];
+  SCOPE = avail.includes(DATA.default_scope) ? DATA.default_scope : avail[0];
+  wrap.innerHTML = "";
+  order.forEach(k => {
+    const sc = DATA.scopes[k];
+    if (!sc) return;
+    const on = avail.includes(k);
+    const b = el("button", "scope-btn" + (k === SCOPE ? " active" : "") + (on ? "" : " disabled"),
+                 sc.label);
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", k === SCOPE ? "true" : "false");
+    if (!on) {
+      b.disabled = true;
+      b.title = "No " + sc.label.toLowerCase() + " games logged yet";
+    } else {
+      b.addEventListener("click", () => { SCOPE = k; paint(); });
+    }
+    wrap.appendChild(b);
+  });
+  bar.hidden = false;
+  paint();
+}
+
+function paint() {
+  document.querySelectorAll(".scope-btn").forEach(b => {
+    const on = b.textContent === DATA.scopes[SCOPE].label;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-selected", on ? "true" : "false");
+  });
+  const sc = DATA.scopes[SCOPE];
+  const note = document.getElementById("scope-note");
+  if (SCOPE === "postseason" && !(DATA.available || []).includes("postseason")) {
+    note.textContent = "No postseason games logged yet.";
+  } else {
+    note.textContent = `${sc.league.games_logged.toLocaleString()} games · ` +
+      `${sc.league.challenges.toLocaleString()} challenges`;
+  }
+  render(sc);
+}
 
 function render(d) {
   document.getElementById("updated").textContent =
-    `Updated ${d.updated} · ${d.league.games_logged} games logged · ${DATA.season} season`;
+    `Updated ${DATA.updated} · ${d.league.games_logged} games logged · ${DATA.season} season`;
   document.querySelectorAll(".minteam").forEach(s => s.textContent = d.min_team_chal);
+  const cp = document.getElementById("corr-panel");
+  if (cp) cp.hidden = !d.correlation;
 
   cards(d);
-  correlation(d);
+  if (d.correlation) correlation(d);
   teamTable(d);
   challengerProfiles(d);
   inningsSection(d);
@@ -51,8 +102,11 @@ function cards(d) {
     [L.per_team, "challenges per team"],
     [best ? `${best.team.split(" ").pop()} ${pct(best.rate)}` : "-", "best team success rate"],
     [mostU ? `${mostU.umpire.split(" ").pop()} ${pct(mostU.rate)}` : "-", "most-overturned umpire"],
-    [(d.correlation.win_pct.r ?? "-"), "success vs win% (r)"],
   ];
+  // correlation needs regular-season standings; postseason shows volume instead
+  items.push(d.correlation
+    ? [(d.correlation.win_pct.r ?? "-"), "success vs win% (r)"]
+    : [L.games_logged.toLocaleString(), "games logged"]);
   const box = document.getElementById("cards");
   box.innerHTML = "";
   items.forEach(([b, l]) => {

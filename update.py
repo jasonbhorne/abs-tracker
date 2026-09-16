@@ -47,12 +47,17 @@ TEAMS = "https://statsapi.mlb.com/api/v1/teams?sportId=1&season={s}"
 
 UA = {"User-Agent": "Mozilla/5.0 (abs-tracker dashboard)"}
 SAVANT_TYPES = ["team-summary", "batter", "catcher", "pitcher", "league"]
-CHAL_HEADER = ["game_pk", "date", "play_id", "hp_umpire", "challenge_team_id",
-               "challenger_type", "is_batter", "is_overturned", "edge_distance",
+CHAL_HEADER = ["game_pk", "date", "game_type", "play_id", "hp_umpire", "challenge_team_id",
+               "challenger_type", "challenging_player_id", "challenging_player_name",
+               "is_batter", "is_overturned", "edge_distance",
                "inning", "half_inning", "pre_balls", "pre_strikes", "call_name"]
+# regular season + the four postseason rounds; excludes spring (S), all-star (A), exhibition (E)
+REGULAR = {"R"}
+POSTSEASON = {"F", "D", "L", "W"}
 TS_COLS = ["date", "entity_name", "team_abbr",
            "n_challenges_off", "n_overturns_off", "rate_overturns_off",
            "n_challenges_def", "n_overturns_def", "rate_overturns_def"]
+ROLES = ("batter", "catcher", "pitcher")
 MIN_TEAM_CHAL = 8
 MIN_UMP_CHAL = 20
 MIN_PLAYER_CHAL = 5
@@ -170,10 +175,26 @@ def extract_challenges(pk):
     out = []
     for pid, p in seen.items():
         ac = p.get("abs_challenge", {}) or {}
-        out.append([pid, ac.get("challenge_team_id", ""), ac.get("challenging_player_type", ""),
-                    ac.get("is_batter", ""), ac.get("is_overturned", ""), ac.get("edge_distance", ""),
-                    p.get("inning", ""), p.get("half_inning", ""), p.get("pre_balls", ""),
-                    p.get("pre_strikes", ""), p.get("call_name", "")])
+        cpid = ac.get("challenging_player_id", "")
+        ctype = ac.get("challenging_player_type", "")
+        # resolve the challenger's name: match the id against the play's three
+        # named participants, falling back to the role if the id is missing
+        name = ""
+        for role in ("batter", "catcher", "pitcher"):
+            if cpid and str(p.get(role, "")) == str(cpid):
+                name = p.get(f"{role}_name", "")
+                break
+        if not name and ctype in ("batter", "catcher", "pitcher"):
+            name = p.get(f"{ctype}_name", "")
+        out.append({"play_id": pid, "challenge_team_id": ac.get("challenge_team_id", ""),
+                    "challenger_type": ctype, "challenging_player_id": cpid,
+                    "challenging_player_name": name,
+                    "is_batter": ac.get("is_batter", ""),
+                    "is_overturned": ac.get("is_overturned", ""),
+                    "edge_distance": ac.get("edge_distance", ""),
+                    "inning": p.get("inning", ""), "half_inning": p.get("half_inning", ""),
+                    "pre_balls": p.get("pre_balls", ""), "pre_strikes": p.get("pre_strikes", ""),
+                    "call_name": p.get("call_name", "")})
     return out
 
 
@@ -199,9 +220,10 @@ def umpires(start, end):
         except RuntimeError as e:
             print(f"   ! schedule {d}: {e}")
             continue
-        games = [str(g["gamePk"]) for dd in sched.get("dates", []) for g in dd.get("games", [])
+        games = [(str(g["gamePk"]), g.get("gameType", ""))
+                 for dd in sched.get("dates", []) for g in dd.get("games", [])
                  if "Final" in g.get("status", {}).get("detailedState", "")]
-        for pk in games:
+        for pk, gtype in games:
             if pk in done:
                 continue
             try:
@@ -209,10 +231,10 @@ def umpires(start, end):
             except RuntimeError as e:
                 print(f"   ! game {pk}: {e}")
                 continue
-            with open(CHALLENGES_CSV, "a", newline="") as fh:
-                w = csv.writer(fh)
+            with open(CHALLENGES_CSV, "a", newline="", encoding="utf-8") as fh:
+                w = csv.DictWriter(fh, fieldnames=CHAL_HEADER, extrasaction="ignore")
                 for c in chs:
-                    w.writerow([pk, d, c[0], ump] + c[1:])
+                    w.writerow({**c, "game_pk": pk, "date": d, "game_type": gtype, "hp_umpire": ump})
             with open(PROCESSED_CSV, "a", newline="") as fh:
                 csv.writer(fh).writerow([pk, d, ump, len(chs)])
             done.add(pk)
@@ -257,87 +279,136 @@ def pearson(xs, ys):
     return ((n * sxy - sx * sy) / den, n) if den else (None, n)
 
 
-def team_rows():
-    path = os.path.join(LATEST, "team-summary.csv")
-    rows = []
-    for r in csv.DictReader(open(path, encoding="utf-8-sig")):
-        co, oo = f(r["n_challenges_off"]), f(r["n_overturns_off"])
-        cd, od = f(r["n_challenges_def"]), f(r["n_overturns_def"])
+def load_ledger():
+    if not os.path.exists(CHALLENGES_CSV):
+        return []
+    return list(csv.DictReader(open(CHALLENGES_CSV, encoding="utf-8-sig")))
+
+
+def ovr(r):
+    return 1 if str(r.get("is_overturned", "")).lower() == "true" else 0
+
+
+SCOPES = {
+    # postseason samples are far smaller, so the "enough data to rank" floors drop
+    "regular":    {"types": REGULAR,    "label": "Regular season",
+                   "min_ump": MIN_UMP_CHAL, "min_team": MIN_TEAM_CHAL,
+                   "min_player": MIN_PLAYER_CHAL},
+    "postseason": {"types": POSTSEASON, "label": "Postseason",
+                   "min_ump": 3, "min_team": 2, "min_player": 2},
+}
+
+
+def scope_rows(rows, scope):
+    ok = SCOPES[scope]["types"]
+    return [r for r in rows if r.get("game_type") in ok]
+
+
+def team_rows(rows, id2abbr, id2name):
+    agg = defaultdict(lambda: {"off": [0, 0], "def": [0, 0]})
+    for r in rows:
+        tid = r.get("challenge_team_id")
+        if not tid:
+            continue
+        try:
+            ab = id2abbr.get(int(tid))
+        except (TypeError, ValueError):
+            ab = None
+        if not ab:
+            continue
+        side = "off" if r.get("challenger_type") == "batter" else "def"
+        a = agg[ab][side]
+        a[0] += 1
+        a[1] += ovr(r)
+    out = []
+    for ab, a in agg.items():
+        co, oo = a["off"]
+        cd, od = a["def"]
         C, O = co + cd, oo + od
-        rows.append({"team": r["entity_name"], "abbr": r["team_abbr"],
-                     "chal_off": int(co), "chal_def": int(cd), "chal": int(C),
-                     "overturned": int(O), "rate": (O / C if C else 0.0),
-                     "rate_off": f(r["rate_overturns_off"]), "rate_def": f(r["rate_overturns_def"])})
-    return rows
+        out.append({"team": id2name.get(ab, ab), "abbr": ab,
+                    "chal_off": co, "chal_def": cd, "chal": C, "overturned": O,
+                    "rate": (O / C if C else 0.0),
+                    "rate_off": (oo / co if co else 0.0),
+                    "rate_def": (od / cd if cd else 0.0)})
+    return out
 
 
-def umpire_rows():
+def umpire_rows(rows):
     agg = defaultdict(lambda: {"n": 0, "ovr": 0, "games": set()})
-    for r in csv.DictReader(open(CHALLENGES_CSV)):
-        u = r["hp_umpire"] or "(unknown)"
-        agg[u]["n"] += 1
-        agg[u]["games"].add(r["game_pk"])
-        if str(r["is_overturned"]).lower() == "true":
-            agg[u]["ovr"] += 1
+    for r in rows:
+        u = r.get("hp_umpire") or "(unknown)"
+        a = agg[u]
+        a["n"] += 1
+        a["games"].add(r["game_pk"])
+        a["ovr"] += ovr(r)
     out = [{"umpire": u, "challenges": a["n"], "overturned": a["ovr"], "games": len(a["games"]),
             "rate": (a["ovr"] / a["n"] if a["n"] else 0.0)} for u, a in agg.items()]
     return sorted(out, key=lambda x: -x["rate"])
 
 
-def player_rows(kind):
-    path = os.path.join(LATEST, f"{kind}.csv")
-    rows = []
-    for r in csv.DictReader(open(path, encoding="utf-8-sig")):
-        c = f(r.get("n_challenges", 0))
-        if c >= MIN_PLAYER_CHAL:
-            rows.append({"name": r["entity_name"], "team": r["team_abbr"], "challenges": int(c),
-                         "overturned": int(f(r.get("n_overturns", 0))), "rate": f(r.get("rate_overturns", 0))})
-    return sorted(rows, key=lambda x: -x["rate"])[:25]
+def player_rows(rows, role, id2abbr, min_chal):
+    agg = defaultdict(lambda: {"n": 0, "ovr": 0, "name": "", "abbr": ""})
+    for r in rows:
+        if r.get("challenger_type") != role:
+            continue
+        pid = r.get("challenging_player_id") or r.get("challenging_player_name")
+        if not pid:
+            continue
+        a = agg[pid]
+        a["n"] += 1
+        a["ovr"] += ovr(r)
+        a["name"] = r.get("challenging_player_name") or a["name"]
+        try:
+            a["abbr"] = id2abbr.get(int(r["challenge_team_id"])) or a["abbr"]
+        except (TypeError, ValueError):
+            pass
+    out = [{"name": a["name"], "team": a["abbr"], "challenges": a["n"],
+            "overturned": a["ovr"], "rate": (a["ovr"] / a["n"] if a["n"] else 0.0)}
+           for a in agg.values() if a["n"] >= min_chal]
+    return sorted(out, key=lambda x: -x["rate"])[:25]
 
 
-ROLES = ("batter", "catcher", "pitcher")
-
-
-def challenger_profiles(id2abbr):
-    """Per-team role split (batter/catcher/pitcher) + success rate, from the ledger,
-    plus the single most-active named challenger per team, from the player CSVs."""
-    # role split per team from the challenge ledger
-    agg = defaultdict(lambda: {r: [0, 0] for r in ROLES})  # abbr -> role -> [n, overturned]
+def challenger_profiles(rows, id2abbr):
+    """Per-team role split (batter/catcher/pitcher) + success rate, and the single
+    most-active named challenger per team. All from the ledger."""
+    agg = defaultdict(lambda: {r: [0, 0] for r in ROLES})
     league = {r: [0, 0] for r in ROLES}
-    for row in csv.DictReader(open(CHALLENGES_CSV)):
-        ab = id2abbr.get(int(row["challenge_team_id"])) if row["challenge_team_id"] else None
-        role = row["challenger_type"]
+    named = defaultdict(lambda: {"n": 0, "ovr": 0, "name": "", "role": ""})
+    for row in rows:
+        tid = row.get("challenge_team_id")
+        try:
+            ab = id2abbr.get(int(tid)) if tid else None
+        except (TypeError, ValueError):
+            ab = None
+        role = row.get("challenger_type")
         if not ab or role not in ROLES:
             continue
-        ov = 1 if str(row["is_overturned"]).lower() == "true" else 0
+        o = ovr(row)
         agg[ab][role][0] += 1
-        agg[ab][role][1] += ov
+        agg[ab][role][1] += o
         league[role][0] += 1
-        league[role][1] += ov
-
-    # most-active named challenger per team across the three player CSVs
-    top = {}  # abbr -> {name, role, challenges, rate}
-    for role in ROLES:
-        path = os.path.join(LATEST, f"{role}.csv")
-        if not os.path.exists(path):
-            continue
-        for r in csv.DictReader(open(path, encoding="utf-8-sig")):
-            ab = r["team_abbr"]
-            n = int(f(r.get("n_challenges", 0)))
-            cur = top.get(ab)
-            if not cur or n > cur["challenges"]:
-                top[ab] = {"name": r["entity_name"], "role": role, "challenges": n,
-                           "rate": f(r.get("rate_overturns", 0))}
-
+        league[role][1] += o
+        pid = row.get("challenging_player_id")
+        if pid:
+            k = (ab, pid)
+            named[k]["n"] += 1
+            named[k]["ovr"] += o
+            named[k]["name"] = row.get("challenging_player_name") or named[k]["name"]
+            named[k]["role"] = role
+    top = {}
+    for (ab, _pid), a in named.items():
+        cur = top.get(ab)
+        if not cur or a["n"] > cur["challenges"]:
+            top[ab] = {"name": a["name"], "role": a["role"], "challenges": a["n"],
+                       "rate": (a["ovr"] / a["n"] if a["n"] else 0.0)}
     profiles = []
     for ab, roles in agg.items():
         total = sum(roles[r][0] for r in ROLES)
-        prof = {"abbr": ab, "total": total,
-                "roles": {r: {"n": roles[r][0], "overturned": roles[r][1],
-                              "rate": (roles[r][1] / roles[r][0] if roles[r][0] else 0.0)}
-                          for r in ROLES},
-                "top": top.get(ab)}
-        profiles.append(prof)
+        profiles.append({"abbr": ab, "total": total,
+                         "roles": {r: {"n": roles[r][0], "overturned": roles[r][1],
+                                       "rate": (roles[r][1] / roles[r][0] if roles[r][0] else 0.0)}
+                                   for r in ROLES},
+                         "top": top.get(ab)})
     profiles.sort(key=lambda x: -x["total"])
     league_summary = {r: {"n": league[r][0], "overturned": league[r][1],
                           "rate": (league[r][1] / league[r][0] if league[r][0] else 0.0)}
@@ -345,22 +416,22 @@ def challenger_profiles(id2abbr):
     return profiles, league_summary
 
 
-def inning_rows():
+def inning_rows(rows):
     """Challenge volume and success by inning; innings 10+ bucket as extras."""
     agg = defaultdict(lambda: {"n": 0, "ovr": 0, "batter_n": 0, "batter_ovr": 0,
                                "def_n": 0, "def_ovr": 0})
-    for r in csv.DictReader(open(CHALLENGES_CSV)):
+    for r in rows:
         try:
             inn = int(float(r["inning"]))
-        except (TypeError, ValueError):
+        except (TypeError, ValueError, KeyError):
             continue
         a = agg[min(inn, 10)]
-        ov = 1 if str(r["is_overturned"]).lower() == "true" else 0
+        o = ovr(r)
         a["n"] += 1
-        a["ovr"] += ov
-        side = "batter" if r["challenger_type"] == "batter" else "def"
+        a["ovr"] += o
+        side = "batter" if r.get("challenger_type") == "batter" else "def"
         a[side + "_n"] += 1
-        a[side + "_ovr"] += ov
+        a[side + "_ovr"] += o
     total = sum(a["n"] for a in agg.values())
     out = []
     for k in sorted(agg):
@@ -376,68 +447,138 @@ def inning_rows():
     return out
 
 
-def league_trend():
-    if not os.path.exists(TEAM_TS_CSV):
-        return []
-    by = {}
-    for r in csv.DictReader(open(TEAM_TS_CSV)):
-        d = r["date"]
-        c = f(r.get("n_challenges_off")) + f(r.get("n_challenges_def"))
-        o = f(r.get("n_overturns_off")) + f(r.get("n_overturns_def"))
-        by.setdefault(d, [0, 0])
-        by[d][0] += c
-        by[d][1] += o
-    return [{"date": d, "challenges": int(by[d][0]), "overturned": int(by[d][1]),
-             "rate": (by[d][1] / by[d][0] if by[d][0] else 0)} for d in sorted(by)]
+def league_trend(rows):
+    """Cumulative league overturn rate by date, straight from the ledger so it
+    covers the whole season rather than only the days we happened to snapshot."""
+    by = defaultdict(lambda: [0, 0])
+    for r in rows:
+        d = r.get("date")
+        if not d:
+            continue
+        by[d][0] += 1
+        by[d][1] += ovr(r)
+    out, cc, co = [], 0, 0
+    for d in sorted(by):
+        c, o = by[d]
+        cc += c
+        co += o
+        out.append({"date": d, "challenges": c, "overturned": o,
+                    "rate": (o / c if c else 0.0),
+                    "cum_challenges": cc, "cum_rate": (co / cc if cc else 0.0)})
+    return out
+
+
+def records(rows):
+    """Single-game superlatives: the extremes a season wrap-up actually wants."""
+    g = defaultdict(lambda: {"n": 0, "ovr": 0, "date": "", "ump": ""})
+    tg = defaultdict(lambda: {"n": 0, "ovr": 0})
+    pg = defaultdict(lambda: {"n": 0, "ovr": 0, "name": "", "role": ""})
+    for r in rows:
+        pk = r["game_pk"]
+        a = g[pk]
+        a["n"] += 1
+        a["ovr"] += ovr(r)
+        a["date"] = r.get("date", "")
+        a["ump"] = r.get("hp_umpire", "")
+        tid = r.get("challenge_team_id")
+        if tid:
+            b = tg[(pk, tid)]
+            b["n"] += 1
+            b["ovr"] += ovr(r)
+        pid = r.get("challenging_player_id")
+        if pid:
+            c = pg[(pk, pid)]
+            c["n"] += 1
+            c["ovr"] += ovr(r)
+            c["name"] = r.get("challenging_player_name") or c["name"]
+            c["role"] = r.get("challenger_type", "")
+    games = [dict(v, game_pk=k) for k, v in g.items()]
+    if not games:
+        return {}
+    worst = sorted([x for x in games if x["n"] >= 5],
+                   key=lambda a: (-a["ovr"] / a["n"], -a["n"]))[:5]
+    most = sorted(games, key=lambda a: -a["ovr"])[:5]
+    perfect = [x for x in games if x["ovr"] == 0]
+    team_best = sorted([dict(v, game_pk=k[0], team_id=k[1]) for k, v in tg.items()],
+                       key=lambda a: (-a["ovr"], -a["n"]))[:5]
+    play_best = sorted([dict(v, game_pk=k[0]) for k, v in pg.items()],
+                       key=lambda a: (-a["ovr"], -a["n"]))[:5]
+    return {
+        "worst_ump_games": worst,
+        "most_overturns_games": most,
+        "perfect_games_count": len(perfect),
+        "total_games": len(games),
+        "perfect_games_top": sorted(perfect, key=lambda a: -a["n"])[:5],
+        "team_best_games": team_best,
+        "player_best_games": play_best,
+        "busiest_game": max(games, key=lambda a: a["n"]),
+    }
+
+
+def build_scope(rows, scope, id2abbr, id2name, standings):
+    cfg = SCOPES[scope]
+    teams = team_rows(rows, id2abbr, id2name)
+    tot_c = sum(t["chal"] for t in teams)
+    tot_o = sum(t["overturned"] for t in teams)
+    profiles, role_league = challenger_profiles(rows, id2abbr)
+    corr = None
+    if scope == "regular":
+        xs, win, era, rd = [], [], [], []
+        for t in teams:
+            st = standings.get(t["abbr"], {})
+            t["win_pct"] = st.get("win_pct")
+            t["era"] = st.get("era")
+            t["run_diff"] = st.get("run_diff")
+            xs.append(t["rate"])
+            win.append(st.get("win_pct"))
+            era.append(st.get("era"))
+            rd.append(st.get("run_diff"))
+        corr = {}
+        for lab, ys in [("win_pct", win), ("era", era), ("run_diff", rd)]:
+            r, n = pearson(xs, ys)
+            corr[lab] = {"r": (round(r, 3) if r is not None else None), "n": n}
+    return {
+        "label": cfg["label"],
+        "league": {"challenges": tot_c, "overturned": tot_o,
+                   "rate": (tot_o / tot_c if tot_c else 0),
+                   "per_team": round(tot_c / 30, 1) if tot_c else 0,
+                   "games_logged": len({r["game_pk"] for r in rows})},
+        "teams": sorted(teams, key=lambda x: -x["rate"]),
+        "umpires": umpire_rows(rows),
+        "players": {k: player_rows(rows, k, id2abbr, cfg["min_player"]) for k in ROLES},
+        "correlation": corr,
+        "trend": league_trend(rows),
+        "challengers": profiles,
+        "role_league": role_league,
+        "innings": inning_rows(rows),
+        "records": records(rows),
+        "min_ump_chal": cfg["min_ump"],
+        "min_team_chal": cfg["min_team"],
+        "min_player_chal": cfg["min_player"],
+    }
 
 
 def build_json():
-    teams = team_rows()
-    umps = umpire_rows()
+    ledger = load_ledger()
     id2abbr = id_to_abbr()
     standings = get_standings()
-    profiles, role_league = challenger_profiles(id2abbr)
-    tot_c = sum(t["chal"] for t in teams)
-    tot_o = sum(t["overturned"] for t in teams)
-
-    # merge standings into team rows + correlation
-    xs, win, era, rd = [], [], [], []
-    for t in teams:
-        s = standings.get(t["abbr"], {})
-        t["win_pct"] = s.get("win_pct")
-        t["era"] = s.get("era")
-        t["run_diff"] = s.get("run_diff")
-        xs.append(t["rate"])
-        win.append(s.get("win_pct"))
-        era.append(s.get("era"))
-        rd.append(s.get("run_diff"))
-    corr = {}
-    for lab, ys in [("win_pct", win), ("era", era), ("run_diff", rd)]:
-        r, n = pearson(xs, ys)
-        corr[lab] = {"r": (round(r, 3) if r is not None else None), "n": n}
-
+    id2name = {ab: v.get("team", ab) for ab, v in standings.items()}
+    scopes = {k: build_scope(scope_rows(ledger, k), k, id2abbr, id2name, standings)
+              for k in SCOPES}
     data = {
         "updated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "season": SEASON,
-        "league": {"challenges": tot_c, "overturned": tot_o,
-                   "rate": (tot_o / tot_c if tot_c else 0), "per_team": round(tot_c / 30, 1),
-                   "games_logged": len(load_processed())},
-        "teams": sorted(teams, key=lambda x: -x["rate"]),
-        "umpires": umps,
-        "min_ump_chal": MIN_UMP_CHAL,
-        "min_team_chal": MIN_TEAM_CHAL,
-        "players": {k: player_rows(k) for k in ("batter", "catcher", "pitcher")},
-        "correlation": corr,
-        "trend": league_trend(),
-        "challengers": profiles,
-        "role_league": role_league,
-        "innings": inning_rows(),
+        "scopes": scopes,
+        "available": [k for k, v in scopes.items() if v["league"]["challenges"] > 0],
+        "default_scope": "regular",
     }
     out = os.path.join(DOCS, "data.json")
     with open(out, "w") as fh:
         json.dump(data, fh, separators=(",", ":"))
-    print(f"  wrote {out}  (teams {len(teams)}, umpires {len(umps)}, "
-          f"league {data['league']['rate']:.1%})")
+    reg = scopes["regular"]["league"]
+    post = scopes["postseason"]["league"]
+    print(f"  wrote {out}  (regular {reg['challenges']} chal @ {reg['rate']:.1%}, "
+          f"postseason {post['challenges']} chal)")
 
 
 if __name__ == "__main__":
