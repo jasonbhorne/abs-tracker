@@ -14,6 +14,7 @@ Usage:
 """
 import csv
 import json
+import re
 import os
 import sys
 import time
@@ -36,7 +37,7 @@ CHALLENGES_CSV = os.path.join(DATA, "challenges.csv")
 PROCESSED_CSV = os.path.join(DATA, "processed_games.csv")
 TEAM_TS_CSV = os.path.join(DATA, "team_timeseries.csv")
 
-SAVANT = "https://baseballsavant.mlb.com/leaderboard/abs-challenges?challengeType={t}&csv=true"
+SAVANT = "https://baseballsavant.mlb.com/leaderboard/abs-challenges?challengeType={t}"
 GF = "https://baseballsavant.mlb.com/gf?game_pk={pk}"
 SCHED = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date={d}"
 BOX = "https://statsapi.mlb.com/api/v1/game/{pk}/boxscore"
@@ -49,6 +50,9 @@ SAVANT_TYPES = ["team-summary", "batter", "catcher", "pitcher", "league"]
 CHAL_HEADER = ["game_pk", "date", "play_id", "hp_umpire", "challenge_team_id",
                "challenger_type", "is_batter", "is_overturned", "edge_distance",
                "inning", "half_inning", "pre_balls", "pre_strikes", "call_name"]
+TS_COLS = ["date", "entity_name", "team_abbr",
+           "n_challenges_off", "n_overturns_off", "rate_overturns_off",
+           "n_challenges_def", "n_overturns_def", "rate_overturns_def"]
 MIN_TEAM_CHAL = 8
 MIN_UMP_CHAL = 20
 MIN_PLAYER_CHAL = 5
@@ -82,25 +86,57 @@ def f(x):
 
 
 # --------------------------------------------------------------------------- #
+ABSDATA_RE = re.compile(r"const absData\s*=\s*(\[.*?\]);", re.S)
+
+
+def absdata(t):
+    """Savant's ?csv=true export for this leaderboard returns HTTP 500 (broken
+    upstream as of 2026-09-16). The same rows are embedded in the page as a
+    `const absData = [...]` literal, so read them from there instead."""
+    html = fetch(SAVANT.format(t=t)).decode("utf-8", "replace")
+    m = ABSDATA_RE.search(html)
+    if not m:
+        raise RuntimeError(f"absData payload not found on page: {SAVANT.format(t=t)}")
+    rows = json.loads(m.group(1))
+    for r in rows:
+        # the CSV called this column entity_name; the payload calls it player_name
+        r.setdefault("entity_name", r.get("player_name", ""))
+    return rows
+
+
+def write_csv(path, rows):
+    cols = list(rows[0].keys())
+    with open(path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=cols)
+        w.writeheader()
+        for r in rows:
+            w.writerow({c: ("" if r.get(c) is None else r.get(c)) for c in cols})
+
+
 def snapshot():
     saved = {}
     for t in SAVANT_TYPES:
-        raw = fetch(SAVANT.format(t=t))
-        with open(os.path.join(LATEST, f"{t}.csv"), "wb") as fh:
-            fh.write(raw)
-        saved[t] = list(csv.DictReader(raw.decode("utf-8-sig").splitlines()))
-    # idempotent per-day append to the time series
-    team = saved["team-summary"]
-    cols = ["date"] + list(team[0].keys())
-    prior = list(csv.reader(open(TEAM_TS_CSV))) if os.path.exists(TEAM_TS_CSV) else []
-    body = [r for r in prior[1:] if r and r[0] != today()]
-    with open(TEAM_TS_CSV, "w", newline="") as fh:
-        w = csv.writer(fh)
-        w.writerow(cols)
-        w.writerows(body)
-        for r in team:
-            w.writerow([today()] + list(r.values()))
-    print(f"  snapshot: team {len(team)}, batters {len(saved['batter'])}, "
+        rows = absdata(t)
+        if not rows:
+            raise RuntimeError(f"empty payload for challengeType={t}")
+        write_csv(os.path.join(LATEST, f"{t}.csv"), rows)
+        saved[t] = rows
+    # idempotent per-day append to the time series, on a fixed column set so
+    # history written under the old CSV schema stays aligned
+    prior = []
+    if os.path.exists(TEAM_TS_CSV):
+        prior = [r for r in csv.DictReader(open(TEAM_TS_CSV, encoding="utf-8-sig"))
+                 if r.get("date") and r["date"] != today()]
+    with open(TEAM_TS_CSV, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=TS_COLS, extrasaction="ignore")
+        w.writeheader()
+        for r in prior:
+            w.writerow({c: r.get(c, "") for c in TS_COLS})
+        for r in saved["team-summary"]:
+            row = {c: ("" if r.get(c) is None else r.get(c)) for c in TS_COLS}
+            row["date"] = today()
+            w.writerow(row)
+    print(f"  snapshot: team {len(saved['team-summary'])}, batters {len(saved['batter'])}, "
           f"catchers {len(saved['catcher'])}, pitchers {len(saved['pitcher'])}")
     return saved
 
