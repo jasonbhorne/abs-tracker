@@ -10146,3 +10146,17 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 824789,2026-09-20,R,612e4209-b537-3eb8-aee1-2d724acc1cea,Alan Porter,158,batter,806198,Cooper Pratt,True,True,0.2058779514575264,9,top,3,2,Ball
 824789,2026-09-20,R,70d6fd72-b741-342c-a370-e965a3baf190,Alan Porter,110,batter,691723,Coby Mayo,True,True,0.028441223680344643,6,bottom,3,0,Ball
 824789,2026-09-20,R,be7e768f-979e-3737-b581-29f48e3a7285,Alan Porter,110,batter,694212,Samuel Basallo,True,True,0.12060069862627333,6,bottom,3,0,Ball
+824787,2026-09-21,R,399c747f-4fc2-371f-ab8b-f6d9c0c30981,Carlos Torres,141,batter,669701,Josh Smith,True,False,0.0812152487334078,7,top,2,2,Strike
+824787,2026-09-21,R,1d2d4519-8379-37d6-9223-fc63aad867fa,Carlos Torres,110,catcher,665966,Carlos Narváez,False,False,0.18126776321063254,8,top,1,2,Ball
+824787,2026-09-21,R,f8eacafb-5ae4-3cde-9dcb-3f754e5fa031,Carlos Torres,141,batter,669701,Josh Smith,True,False,0.057567041424898546,9,top,3,1,Strike
+824787,2026-09-21,R,5268a8d0-dde1-32d4-b2c1-81fc185d2abb,Carlos Torres,141,catcher,672386,Alejandro Kirk,False,True,0.21720439587378748,2,bottom,2,2,Strike
+824221,2026-09-21,R,4574520b-18d4-3ce6-b68d-67eea3ad86e3,Emil Jimenez,120,batter,686611,Dylan Crews,True,False,0.14973351781859978,6,top,3,2,Strike
+824221,2026-09-21,R,7cd3b31b-fce7-357d-8428-b2aa594fc358,Emil Jimenez,116,batter,650402,Gleyber Torres,True,True,0.055931277462133125,2,bottom,1,0,Ball
+824221,2026-09-21,R,fdc67c8d-4f3a-369c-af71-9e927859fa0d,Emil Jimenez,120,catcher,660688,Keibert Ruiz,False,False,0.06533766066612802,5,bottom,0,1,Ball
+823169,2026-09-21,R,c93bb925-a930-3ce8-a992-d8685bd7d62c,Andy Fletcher,142,batter,807712,Luke Keaschall,True,True,0.01888835092880571,3,top,0,0,Ball
+823169,2026-09-21,R,a1237588-0b9c-3624-899b-1adebbfc72f4,Andy Fletcher,142,batter,807712,Luke Keaschall,True,False,0.040200199790003666,8,top,1,1,Strike
+823169,2026-09-21,R,89789195-2dd1-356a-8353-676e79c17736,Andy Fletcher,137,catcher,668800,Andrew Knizner,False,False,0.09045430839443915,9,top,2,2,Ball
+823169,2026-09-21,R,22e6fa34-3b30-3369-b419-28350eac61d5,Andy Fletcher,142,catcher,680777,Ryan Jeffers,False,True,0.16358565551471882,2,bottom,1,1,Strike
+823169,2026-09-21,R,c73e7a8f-2e39-3217-a82a-bbc5b5cf86c3,Andy Fletcher,142,catcher,680777,Ryan Jeffers,False,True,0.18408036846350262,3,bottom,3,1,Strike
+823169,2026-09-21,R,85980fdf-9239-3d7c-975e-e5e9de1e2d8b,Andy Fletcher,142,catcher,680777,Ryan Jeffers,False,True,0.01889981587665801,3,bottom,1,0,Strike
+823169,2026-09-21,R,fb0b0b89-1c4c-3282-92a5-68db5ecfe99f,Andy Fletcher,137,batter,683766,Christian Koss,True,True,0.12020581470026272,6,bottom,0,0,Ball
