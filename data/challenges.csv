@@ -10160,3 +10160,74 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 823169,2026-09-21,R,c73e7a8f-2e39-3217-a82a-bbc5b5cf86c3,Andy Fletcher,142,catcher,680777,Ryan Jeffers,False,True,0.18408036846350262,3,bottom,3,1,Strike
 823169,2026-09-21,R,85980fdf-9239-3d7c-975e-e5e9de1e2d8b,Andy Fletcher,142,catcher,680777,Ryan Jeffers,False,True,0.01889981587665801,3,bottom,1,0,Strike
 823169,2026-09-21,R,fb0b0b89-1c4c-3282-92a5-68db5ecfe99f,Andy Fletcher,137,batter,683766,Christian Koss,True,True,0.12020581470026272,6,bottom,0,0,Ball
+823543,2026-09-22,R,4f19608d-6ed7-3d73-b9d6-6342742e9152,Sean Barber,147,catcher,645305,Ali Sánchez,False,False,0.08098415746845912,1,top,2,2,Ball
+823543,2026-09-22,R,cc086116-cf3a-30ec-9459-a9be1b7954ce,Sean Barber,147,batter,671218,Heliot Ramos,True,False,0.13970599001128725,1,bottom,2,1,Strike
+823543,2026-09-22,R,ae5e4c5f-d719-3fe7-97f6-be5f8b1c0158,Sean Barber,139,catcher,689414,Liam Hicks,False,True,0.05503903678748401,6,bottom,0,0,Strike
+823494,2026-09-22,R,61db6193-6ded-3d68-9995-b741351823cd,John Libka,147,catcher,669224,Austin Wells,False,True,0.10330012672215139,3,top,0,0,Strike
+823494,2026-09-22,R,a25d776d-e68c-3135-8698-db70f36748aa,John Libka,147,catcher,669224,Austin Wells,False,False,0.012216033304409249,3,top,1,1,Ball
+823494,2026-09-22,R,4f58ca60-a3ba-3958-84ed-a24e2cf2703e,John Libka,139,batter,656775,Cedric Mullins,True,True,0.035077655335441174,9,top,1,1,Ball
+823494,2026-09-22,R,3c62f0a5-a191-31f5-ba16-9ba4711f3908,John Libka,139,catcher,663743,Nick Fortes,False,False,0.01972565724809995,7,bottom,0,0,Ball
+824222,2026-09-22,R,69798a2b-1e4c-38aa-b540-9c70f7a9fcb0,Louie Krupa,120,catcher,660688,Keibert Ruiz,False,True,0.05851627188850128,4,bottom,0,0,Strike
+824222,2026-09-22,R,27a1ac35-c3e7-38d7-9f89-db778348f2c3,Louie Krupa,120,catcher,660688,Keibert Ruiz,False,False,0.004006344009918852,5,bottom,0,0,Ball
+824222,2026-09-22,R,bd458f14-8dd2-3c62-a7b6-dbe76d4b37df,Louie Krupa,116,batter,805808,Kevin McGonigle,True,False,0.06328812726089694,9,bottom,1,2,Strike
+823328,2026-09-22,R,ab53ba06-0865-3ee1-82bb-018fa2875224,Ron Kulpa,134,catcher,804668,Rafael Flores Jr.,False,False,0.08406226197093793,6,top,2,2,Ball
+823328,2026-09-22,R,e925c14c-2759-37a5-9d61-2f15074cf804,Ron Kulpa,138,catcher,699024,Leo Bernal,False,True,0.09357508807074588,5,bottom,0,0,Strike
+823328,2026-09-22,R,01c60575-f516-3cbb-bd78-c34c1c041376,Ron Kulpa,138,catcher,699024,Leo Bernal,False,False,0.024226378352472225,8,bottom,0,0,Ball
+823412,2026-09-22,R,d4448b16-8c3b-33ff-9e0e-90d393d69e3d,Shane Livensparger,158,batter,641343,Jake Bauers,True,True,0.13677165946151404,6,top,0,0,Ball
+823412,2026-09-22,R,f63c4498-85d5-3ee8-83f1-b53d308baee6,Shane Livensparger,158,batter,806198,Cooper Pratt,True,True,0.052635745784080715,7,top,1,1,Ball
+823412,2026-09-22,R,14e26370-b694-385d-ae4f-402f2af52f7e,Shane Livensparger,158,batter,661388,William Contreras,True,False,0.38754115988693105,9,top,3,2,Strike
+823412,2026-09-22,R,7912712a-1d8d-3f68-af73-a231e2f9977a,Shane Livensparger,158,catcher,661388,William Contreras,False,True,0.04326745695877232,2,bottom,0,2,Strike
+823412,2026-09-22,R,a3a6d455-7499-3a4d-8980-cfcbf3f16ac3,Shane Livensparger,158,catcher,661388,William Contreras,False,True,0.24017843485723844,4,bottom,0,1,Strike
+823412,2026-09-22,R,1511a2cd-27fd-33ff-8fa1-2723cd417a26,Shane Livensparger,158,catcher,661388,William Contreras,False,True,0.06340459019613764,5,bottom,0,0,Strike
+824709,2026-09-22,R,d56dc662-8121-31e1-bb86-8f64baf09c8c,Ramon De Jesus,111,catcher,668939,Adley Rutschman,False,True,0.0654224029266538,1,top,1,1,Strike
+824709,2026-09-22,R,35eee933-76c4-3396-94b2-0cafd43fb5e0,Ramon De Jesus,111,catcher,668939,Adley Rutschman,False,True,0.207842014257275,6,top,0,0,Strike
+824709,2026-09-22,R,92bb77ba-7703-38f0-921a-ecc432ea70a3,Ramon De Jesus,114,batter,690984,Petey Halpin,True,True,0.21691132482472097,9,top,2,1,Ball
+824709,2026-09-22,R,ea903c07-ca4d-3f29-b956-d4c2fab479d8,Ramon De Jesus,111,catcher,668939,Adley Rutschman,False,True,0.04569565258623476,9,top,3,0,Strike
+824709,2026-09-22,R,f79b040a-a41d-3f35-b30d-c670d3e3542a,Ramon De Jesus,114,catcher,595978,Austin Hedges,False,True,0.02416872254591751,3,bottom,0,0,Strike
+824709,2026-09-22,R,ed8422f1-e65c-3f7f-8c04-1ff13be9e6b4,Ramon De Jesus,114,catcher,595978,Austin Hedges,False,False,0.00823332283076518,6,bottom,1,2,Ball
+824709,2026-09-22,R,d0c370c9-089a-3089-8204-e8e31c26ef08,Ramon De Jesus,111,batter,643396,Isiah Kiner-Falefa,True,False,0.12584706376576793,9,bottom,1,2,Strike
+824709,2026-09-22,R,73744556-dc2c-3eaa-8cd5-65be3bb0f6b3,Ramon De Jesus,114,catcher,595978,Austin Hedges,False,False,0.22297949246682036,9,bottom,2,2,Ball
+824867,2026-09-22,R,7ee17e9c-c8da-32ff-92f7-7c532eb24d25,Jordan Baker,144,catcher,669221,Sean Murphy,False,True,0.12186164987096504,1,top,1,1,Strike
+824867,2026-09-22,R,5881770e-a0dd-330e-b884-d3fdf9e69f06,Jordan Baker,144,catcher,669221,Sean Murphy,False,True,0.10426328333978185,2,top,1,0,Strike
+824867,2026-09-22,R,e0cd2dd8-d951-331d-8c86-e9568d0a356b,Jordan Baker,113,catcher,663886,Tyler Stephenson,False,True,0.06195983173358832,7,bottom,0,0,Strike
+824061,2026-09-22,R,7b901646-177f-3675-be7b-a5260dcc4662,Adam Hamari,118,catcher,695600,Carter Jensen,False,True,0.02588423983910515,1,top,3,1,Strike
+824061,2026-09-22,R,4e791460-8733-3921-9d0f-6afec0a727b5,Adam Hamari,145,batter,808959,Munetaka Murakami,True,True,0.09138986946150941,3,top,3,2,Ball
+824061,2026-09-22,R,dc08c9b2-e83d-3808-b996-8f28a877766c,Adam Hamari,118,catcher,695600,Carter Jensen,False,False,0.07966292020732758,3,top,2,2,Ball
+824061,2026-09-22,R,e4e61aa2-b3dc-3666-8a56-4d1d794442e2,Adam Hamari,118,catcher,695600,Carter Jensen,False,False,0.012295880338718437,6,top,1,2,Ball
+824061,2026-09-22,R,a341aeb3-cfc2-3712-959d-1f27c5460df1,Adam Hamari,145,batter,678246,Miguel Vargas,True,True,0.2665628335443896,7,top,2,0,Ball
+824061,2026-09-22,R,fcbdc79c-5ebe-3050-994c-6c5a44b7991b,Adam Hamari,145,catcher,691019,Kyle Teel,False,True,0.09732835473745027,1,bottom,0,0,Strike
+824061,2026-09-22,R,c935de3c-f2fd-343b-bddd-f3d57642cb26,Adam Hamari,145,catcher,691019,Kyle Teel,False,True,0.06201827536783111,3,bottom,0,0,Strike
+824061,2026-09-22,R,e4cdc5be-6133-3bc3-8b4f-8096876b9ba6,Adam Hamari,145,catcher,691019,Kyle Teel,False,False,0.01734528255339858,8,bottom,1,1,Ball
+824061,2026-09-22,R,ce009049-5e9c-3e7c-8419-bce9150a7e1c,Adam Hamari,145,catcher,691019,Kyle Teel,False,False,0.23589461548359414,9,bottom,0,0,Ball
+824624,2026-09-22,R,97a01fa6-5132-3e85-bbe5-baa7109335e7,Nic Lentz,112,catcher,608348,Carson Kelly,False,False,0.025336577002414443,4,top,0,0,Ball
+824624,2026-09-22,R,e542a008-80c8-39bb-a6cd-d28ac7db290c,Nic Lentz,112,catcher,608348,Carson Kelly,False,True,0.14443741526062992,10,top,0,0,Strike
+824624,2026-09-22,R,5fbf8513-bf2c-3f02-bd8e-98944eefe0e1,Nic Lentz,146,batter,665923,Esteury Ruiz,True,False,0.303393706146052,12,top,0,1,Strike
+824624,2026-09-22,R,f24a10a0-bb8d-380a-91da-7238b46f4359,Nic Lentz,146,catcher,682663,Agustín Ramírez,False,False,0.10056377178178112,3,bottom,0,1,Ball
+824624,2026-09-22,R,38ff3e28-3e99-361e-b198-790797cb6881,Nic Lentz,146,catcher,682663,Agustín Ramírez,False,True,0.12468597035149198,4,bottom,1,2,Strike
+824624,2026-09-22,R,d4ee1612-c568-3d34-a04d-b371f23a8eb4,Nic Lentz,112,batter,663538,Nico Hoerner,True,False,0.12771355234641868,6,bottom,0,0,Strike
+824624,2026-09-22,R,e75f595d-3a75-32e8-87d3-a7044578890f,Nic Lentz,146,catcher,691788,Joe Mack,False,False,0.08655883294439261,9,bottom,1,2,Ball
+824624,2026-09-22,R,c42c99ae-d8d8-31f4-957c-5b65cb28f22d,Nic Lentz,146,catcher,691788,Joe Mack,False,False,0.10533759716658443,10,bottom,3,2,Ball
+822840,2026-09-22,R,937fdf5d-b7e0-3dd6-b8e1-efb66930441c,Laz Diaz,140,pitcher,669022,MacKenzie Gore,False,True,0.08999551466821254,5,top,3,2,Strike
+822840,2026-09-22,R,b7ca22ae-c307-360b-8f49-a30c7d166b66,Laz Diaz,121,batter,682626,Francisco Alvarez,True,False,0.13049735143126995,6,top,1,0,Strike
+822840,2026-09-22,R,2d24ccd5-ccf3-3de8-a5cd-b30a1a7e627f,Laz Diaz,121,batter,805999,A.J. Ewing,True,False,0.24427422747997007,8,top,0,1,Strike
+822840,2026-09-22,R,7573a2cf-19be-3568-9cf9-70d45c3d1fd4,Laz Diaz,121,catcher,620443,Luis Torrens,False,True,0.054885921401758186,3,bottom,0,0,Strike
+822840,2026-09-22,R,874e2154-446a-3974-ac70-00599b305634,Laz Diaz,140,batter,694671,Wyatt Langford,True,False,0.03382493666390585,3,bottom,0,1,Strike
+822840,2026-09-22,R,6600a5ac-2f78-31f5-a976-88b8ec15f026,Laz Diaz,121,catcher,620443,Luis Torrens,False,True,0.046447361408352705,7,bottom,0,0,Strike
+824302,2026-09-22,R,f176318d-df42-3d4a-9cae-e0ef6a01c9fa,David Rackley,115,catcher,696100,Hunter Goodman,False,False,0.177856807835157,9,top,1,2,Ball
+824953,2026-09-22,R,1936797a-488b-3108-90ec-fe5a0a747e57,Ben May,108,batter,685133,Wade Meckler,True,True,0.13376409472578166,2,top,3,2,Ball
+824953,2026-09-22,R,0c58ceca-73ee-3b41-9528-a33c90ee7d6c,Ben May,133,catcher,641680,Jonah Heim,False,True,0.020201325169169504,2,top,1,2,Strike
+824953,2026-09-22,R,66f61c39-3c58-3407-847c-efe9ee4fe3e8,Ben May,108,batter,672724,Oswald Peraza,True,False,0.14196746918856706,9,top,2,2,Strike
+824953,2026-09-22,R,e3988abe-a042-38f6-8bb9-9cb979422785,Ben May,108,catcher,694208,Moisés Ballesteros,False,False,0.02721974042608634,2,bottom,2,2,Ball
+824953,2026-09-22,R,123dfbc0-ad9b-31e1-a4ae-8ee5c2a21b21,Ben May,133,batter,683021,Michael Stefanic,True,True,0.06124025535717105,7,bottom,0,0,Ball
+824953,2026-09-22,R,783cb2e5-1e82-3c53-b60c-e108e10173fc,Ben May,133,batter,643446,Jeff McNeil,True,True,0.046592361506522365,8,bottom,0,0,Ball
+823089,2026-09-22,R,030f7d43-45ee-3adf-abca-180ff1580bfe,Ryan Blakney,117,batter,673237,Yainer Diaz,True,False,0.110181514490852,1,top,3,2,Strike
+823089,2026-09-22,R,df8be68e-2f0d-36ed-bff3-04b48df63ab5,Ryan Blakney,117,batter,572233,Christian Walker,True,False,0.20766231785590883,7,top,0,0,Strike
+823089,2026-09-22,R,5186fa27-bbf7-364f-bc13-a7c22ed74b01,Ryan Blakney,136,catcher,663728,Cal Raleigh,False,False,0.017957385414483454,7,top,0,0,Ball
+823089,2026-09-22,R,a7d2566f-c75a-3e0f-9927-e0c786d1bb1c,Ryan Blakney,136,batter,668227,Randy Arozarena,True,True,0.046590813608438544,1,bottom,3,2,Ball
+823089,2026-09-22,R,509d3917-bce9-326f-aeea-4f9c3e126878,Ryan Blakney,136,batter,677594,Julio Rodríguez,True,False,0.015767996147159624,6,bottom,0,1,Strike
+823166,2026-09-22,R,644443d8-d9c3-306d-8202-fa2e25fffc3c,Steven Jaschinski,137,catcher,701852,Drew Cavanaugh,False,False,0.0385748832777202,6,top,2,0,Ball
+823166,2026-09-22,R,4f962191-56df-3ca0-bfe6-ac0fd8255a1d,Steven Jaschinski,137,catcher,668800,Andrew Knizner,False,True,0.10755765691963481,8,top,1,1,Strike
+823166,2026-09-22,R,778af30a-ed04-3a7b-b342-7e62e4cfeab8,Steven Jaschinski,142,catcher,605170,Victor Caratini,False,False,0.020580273946560937,9,bottom,3,2,Ball
+823897,2026-09-22,R,5e63995d-87b1-32d4-ae15-8b5cd8b97b05,Lance Barksdale,135,catcher,669134,Luis Campusano,False,True,0.12803512731568478,7,bottom,1,1,Strike
+823897,2026-09-22,R,000eca44-967b-36c7-a4dc-7685f31cf862,Lance Barksdale,135,catcher,669134,Luis Campusano,False,False,0.17542542352542312,7,bottom,2,2,Ball
+823897,2026-09-22,R,a3208ea8-0490-381f-bad7-5e536ba7f16c,Lance Barksdale,135,catcher,669134,Luis Campusano,False,False,0.11271558922538262,8,bottom,1,1,Ball
