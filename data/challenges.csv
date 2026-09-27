@@ -10430,3 +10430,68 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 823167,2026-09-25,R,09c8c18f-6d9c-32b0-951c-de66708e348e,Tripp Gibson,137,catcher,668800,Andrew Knizner,False,True,0.12061289735916447,6,top,2,0,Strike
 823167,2026-09-25,R,c53da6c8-1ffe-3cee-a8e0-cbf64651b0a0,Tripp Gibson,137,batter,691785,Marcelo Mayer,True,True,0.016060349695453655,8,bottom,1,1,Ball
 823167,2026-09-25,R,67189006-0bc5-3f9f-b328-5ee724c6a0b0,Tripp Gibson,137,batter,683766,Christian Koss,True,False,0.246859686204845,9,bottom,2,2,Strike
+822678,2026-09-26,R,0b8eebc0-9e46-3488-8209-63c0d9ee0fdc,Austin Jones,120,catcher,660688,Keibert Ruiz,False,True,0.022178562258197587,1,top,1,1,Strike
+822678,2026-09-26,R,62b9a5aa-673e-35a8-8b1c-a2af522df03e,Austin Jones,120,catcher,660688,Keibert Ruiz,False,True,0.029258092259023538,3,top,0,0,Strike
+822678,2026-09-26,R,e25c4238-f676-3cc8-80c2-de13e45de628,Austin Jones,120,catcher,660688,Keibert Ruiz,False,False,0.02336092539067726,3,top,0,2,Ball
+822678,2026-09-26,R,eda60f7d-812b-3b1c-b9d5-6b2b3be2d8b0,Austin Jones,121,catcher,682626,Francisco Alvarez,False,False,0.053433929954370366,3,bottom,0,2,Ball
+824219,2026-09-26,R,398a5d17-0952-339d-83a9-6a145c6be9a2,Laz Diaz,116,batter,805808,Kevin McGonigle,True,False,0.03665926379800488,1,bottom,0,0,Strike
+824219,2026-09-26,R,a63f90c8-9683-30de-97ca-dade7fc3e238,Laz Diaz,134,catcher,680779,Henry Davis,False,False,0.038060276812410324,3,bottom,2,2,Ball
+824219,2026-09-26,R,c33ee4e6-a4db-354f-ad17-f93b7a0beb73,Laz Diaz,116,batter,679529,Spencer Torkelson,True,False,0.14005838683005933,4,bottom,1,1,Strike
+824219,2026-09-26,R,d8ba563a-0417-3257-bf51-258f2335b017,Laz Diaz,134,catcher,680779,Henry Davis,False,False,0.018544048952689365,4,bottom,0,2,Ball
+822759,2026-09-26,R,5ef15538-0693-3451-a31f-3dbae53baf5a,Paul Clemons,113,batter,668709,JJ Bleday,True,False,0.2651232030377457,3,top,3,2,Strike
+822759,2026-09-26,R,0b456f01-a9a7-31bb-a424-d9fc2259ee5d,Paul Clemons,141,catcher,672386,Alejandro Kirk,False,False,0.029051495265866714,5,top,3,2,Ball
+822759,2026-09-26,R,20267b69-b78d-33a7-b8e0-f84839b4c75c,Paul Clemons,141,catcher,672386,Alejandro Kirk,False,True,0.008947421224019037,6,top,1,1,Strike
+822759,2026-09-26,R,db6486b0-202b-39e6-ad07-eab458b93ca9,Paul Clemons,113,batter,668709,JJ Bleday,True,False,0.32889952438735437,7,top,0,1,Strike
+823165,2026-09-26,R,5e093b23-1888-3ad9-9e4a-dea4c3ebd3a5,Nick Mahrley,119,batter,660271,Shohei Ohtani,True,False,0.2028765739115035,3,top,0,0,Strike
+823165,2026-09-26,R,3e89c462-a283-31ce-a0fc-b3d2e3cdf26d,Nick Mahrley,137,catcher,668800,Andrew Knizner,False,False,0.04903036266609308,3,top,1,1,Ball
+823165,2026-09-26,R,5122880f-528a-3279-8aa6-0cd76aeeef87,Nick Mahrley,137,catcher,668800,Andrew Knizner,False,True,0.06992901420635877,7,top,2,2,Strike
+823165,2026-09-26,R,ef876e51-f9d7-3cc5-9edf-71c144cc5ce9,Nick Mahrley,137,catcher,668800,Andrew Knizner,False,True,0.03082008635110489,7,top,3,2,Strike
+823165,2026-09-26,R,f0c9cff9-0390-37db-9f53-d6b1e1f84ebf,Nick Mahrley,137,batter,678545,Osleivis Basabe,True,False,0.18037724482073203,9,bottom,0,2,Strike
+823653,2026-09-26,R,cc96b915-b8cc-3f8b-8a2b-9af2556753cd,David Rackley,142,catcher,605170,Victor Caratini,False,True,0.17534652274742601,2,top,3,0,Strike
+823653,2026-09-26,R,d17b4b68-cba0-3be1-b46c-297adcbefd49,David Rackley,140,batter,694497,Evan Carter,True,True,0.05586383920527617,5,top,1,2,Ball
+823653,2026-09-26,R,661837f0-2a55-3fee-8fae-f6aab402053a,David Rackley,142,catcher,605170,Victor Caratini,False,False,0.053626767038657555,7,top,0,0,Ball
+823653,2026-09-26,R,9a72d9d2-847f-3231-b7e8-349a1425ecb5,David Rackley,142,catcher,605170,Victor Caratini,False,False,0.00016011640546810535,7,top,3,1,Ball
+823653,2026-09-26,R,caaa0223-73b8-3596-95d0-0ddc5acd783c,David Rackley,140,batter,683227,Cody Freeman,True,False,0.07753333346998637,7,top,0,0,Strike
+823653,2026-09-26,R,b3bf62eb-e653-3c73-8fc2-4271a5d78c03,David Rackley,140,pitcher,543135,Nathan Eovaldi,False,True,0.046430512289981074,3,bottom,1,1,Strike
+823653,2026-09-26,R,3546666a-3935-36cc-854e-aaae32fc8244,David Rackley,140,catcher,643376,Danny Jansen,False,True,0.07004262048223264,7,bottom,2,0,Strike
+823653,2026-09-26,R,f0f2d461-9f9b-3e0d-bf92-993daf9a353f,David Rackley,140,catcher,643376,Danny Jansen,False,True,0.050112211650462646,8,bottom,1,0,Strike
+823813,2026-09-26,R,5f0c4418-5dc9-3a27-84d1-86e0853c252a,Clint Vondrak,144,batter,660670,Ronald Acuña Jr.,True,True,0.13364914132020744,1,top,0,2,Ball
+823813,2026-09-26,R,a249c14d-3a96-3d06-8b94-43a19143e6df,Clint Vondrak,146,catcher,682663,Agustín Ramírez,False,True,0.008532298171301633,5,top,3,2,Strike
+823813,2026-09-26,R,693b7544-08fa-3cc1-9634-3a69f369f77a,Clint Vondrak,144,batter,671739,Michael Harris II,True,False,0.04036113367990202,6,top,0,0,Strike
+823813,2026-09-26,R,bd14a40c-202e-3c43-88c1-e3bc677360df,Clint Vondrak,144,catcher,686948,Drake Baldwin,False,True,0.05592701407661416,4,bottom,1,0,Strike
+823813,2026-09-26,R,3ce1f47d-fee0-3be9-964a-738c092848f5,Clint Vondrak,146,batter,805300,Jakob Marsee,True,True,0.13409619848799514,4,bottom,0,0,Ball
+823813,2026-09-26,R,016e477e-3306-3a80-ae18-9c7eaa26b08a,Clint Vondrak,144,catcher,686948,Drake Baldwin,False,False,0.14219217834796272,5,bottom,0,1,Ball
+824057,2026-09-26,R,cad76764-eb03-3029-a24f-7e34e7c943cd,John Libka,118,catcher,695600,Carter Jensen,False,False,0.18537324844038117,9,top,0,0,Ball
+824057,2026-09-26,R,6eae9bfc-7f2f-3a24-abdd-9cd0788901cc,John Libka,114,catcher,672275,Patrick Bailey,False,False,0.15285520132226948,3,bottom,1,0,Ball
+824543,2026-09-26,R,41a444b6-cd27-36ca-bce8-932c855cf409,Shane Livensparger,115,batter,694249,Cole Carrigg,True,True,0.001013728989888621,2,top,0,1,Ball
+824543,2026-09-26,R,815edd7b-35f0-3190-8811-a82bcf6544a3,Shane Livensparger,115,batter,681393,Connor Norby,True,False,0.0533815593802629,5,top,1,0,Strike
+824543,2026-09-26,R,ea474c31-1d84-35f4-82ff-85c7f4c7aed2,Shane Livensparger,145,batter,808959,Munetaka Murakami,True,False,0.2423055892731507,3,bottom,0,0,Strike
+824543,2026-09-26,R,e4f060cb-5574-3100-8159-2dea90da40ff,Shane Livensparger,145,batter,803011,Sam Antonacci,True,False,0.07242467284048248,6,bottom,2,1,Strike
+823733,2026-09-26,R,79e43dbd-2cf7-3809-903c-b15905441707,Jordan Baker,158,catcher,661388,William Contreras,False,True,0.2821242808629848,1,top,0,0,Strike
+823733,2026-09-26,R,31ff8ea7-f090-38bf-9d49-f0b73369092a,Jordan Baker,158,catcher,661388,William Contreras,False,True,0.31989656850407855,1,top,0,2,Strike
+823733,2026-09-26,R,3940fd95-a6e6-3b58-91bc-71a9c57f112c,Jordan Baker,138,batter,699024,Leo Bernal,True,True,0.03804571761231547,2,top,1,2,Ball
+823733,2026-09-26,R,7cb84eb1-8850-3a35-b6a2-517428c195a0,Jordan Baker,138,batter,669357,Nolan Gorman,True,False,0.15394783389761346,4,top,0,1,Strike
+823733,2026-09-26,R,e7ef9c3e-a1f0-3a1e-839c-46cfa19bc92f,Jordan Baker,138,catcher,699024,Leo Bernal,False,True,0.10718728725213422,3,bottom,3,2,Strike
+823733,2026-09-26,R,509a04cb-ed4a-317a-8196-123dba823f0d,Jordan Baker,138,catcher,699024,Leo Bernal,False,False,0.10281865282016923,8,bottom,0,0,Ball
+823407,2026-09-26,R,b1dfdacf-c926-3ad5-9192-04095a589dc0,Ramon De Jesus,139,batter,680700,Richie Palacios,True,True,0.00031297921230592773,1,top,0,1,Ball
+823407,2026-09-26,R,0c070c0a-e379-30f1-b445-5e688acf7203,Ramon De Jesus,143,catcher,592663,J.T. Realmuto,False,True,0.04560514094509538,2,top,0,0,Strike
+823407,2026-09-26,R,1fb7236e-2cdf-3463-8d8b-65c129981422,Ramon De Jesus,143,catcher,592663,J.T. Realmuto,False,True,0.11723822453000654,2,top,2,1,Strike
+823407,2026-09-26,R,8dd68a86-21a6-3f68-be3d-7e00decb0ed3,Ramon De Jesus,139,batter,691406,Junior Caminero,True,False,0.23402025347899724,3,top,1,2,Strike
+823407,2026-09-26,R,86fb5303-5ccb-35db-9a43-2ca87107a75a,Ramon De Jesus,143,batter,702222,Justin Crawford,True,False,0.263398260843954,6,bottom,2,2,Strike
+823407,2026-09-26,R,25708289-84df-3ec8-bbfe-c9d99cb88a47,Ramon De Jesus,143,batter,607208,Trea Turner,True,True,0.27204585910910795,6,bottom,0,1,Ball
+823407,2026-09-26,R,3d51b40e-80da-385c-8fd1-3f04350e25d5,Ramon De Jesus,139,catcher,689414,Liam Hicks,False,False,0.022957970067148628,6,bottom,1,1,Ball
+823245,2026-09-26,R,9a2437f9-5179-30e6-86c4-581c7d12f16f,Ben May,135,catcher,806956,Ethan Salas,False,False,0.028335070369408646,4,top,2,0,Ball
+823245,2026-09-26,R,6c561683-32ca-35a4-b009-2e66bd7388b6,Ben May,109,batter,672515,Gabriel Moreno,True,False,0.04595982456706271,7,top,2,0,Strike
+823245,2026-09-26,R,232a4f5b-b6d8-3f47-8cd0-6a23e8730601,Ben May,135,batter,593428,Xander Bogaerts,True,True,0.1348061791696733,1,bottom,0,2,Ball
+823245,2026-09-26,R,da2dbf88-c2a8-3984-8d76-0f3aa9d08297,Ben May,135,batter,593428,Xander Bogaerts,True,False,0.05862700120118247,3,bottom,3,1,Strike
+823245,2026-09-26,R,a8313ed6-f6d5-3dca-b528-5a5f8f9945ac,Ben May,109,catcher,543510,James McCann,False,False,0.07329333976401543,6,bottom,1,1,Ball
+824949,2026-09-26,R,46636709-0093-3916-952c-38207702ea1f,Gabe Morales,117,batter,514888,Jose Altuve,True,True,0.00988531431563923,4,top,2,1,Ball
+824949,2026-09-26,R,94827401-5785-36fd-8f83-6e3effe45d6d,Gabe Morales,117,batter,666211,Taylor Trammell,True,False,0.06912589852738327,5,top,1,2,Strike
+824949,2026-09-26,R,62f4004b-26ca-3e27-b7c3-0a61819fa1b7,Gabe Morales,117,batter,572233,Christian Walker,True,True,0.0004603575236608176,6,top,0,0,Ball
+824949,2026-09-26,R,34c4c95a-01e8-3044-94e1-e0948db406b9,Gabe Morales,133,catcher,641680,Jonah Heim,False,True,0.03948667397991845,6,top,3,2,Strike
+824949,2026-09-26,R,7eb2fcb8-705d-364e-88f5-55dbfc5afa87,Gabe Morales,133,batter,680869,Zack Gelof,True,True,0.05904425316162444,9,bottom,0,0,Ball
+823083,2026-09-26,R,05c3568a-b75e-30f4-a357-7432a0e6803a,Jansen Visconti,108,batter,687263,Zach Neto,True,True,0.18650343207619824,3,top,1,1,Ball
+823083,2026-09-26,R,6b50185a-73bb-3d8a-bcc4-9a5f762d8d1c,Jansen Visconti,108,catcher,623168,Tyler Heineman,False,True,0.03790661522890304,5,bottom,0,0,Strike
+823083,2026-09-26,R,864623f1-a765-39ce-ada5-46a3cdd9cddd,Jansen Visconti,136,batter,660844,Leo Rivas,True,False,0.05924564607178984,5,bottom,1,2,Strike
+823083,2026-09-26,R,fd9421b8-9453-386e-9101-f1c76c932395,Jansen Visconti,136,batter,686527,Dominic Canzone,True,False,0.08794642457839963,6,bottom,3,2,Strike
+823083,2026-09-26,R,4088909f-b5ad-3fcc-bf00-933b9451c483,Jansen Visconti,108,catcher,623168,Tyler Heineman,False,False,0.06053407348518404,8,bottom,0,0,Ball
