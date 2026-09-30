@@ -10550,3 +10550,19 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 823731,2026-09-27,R,837a735d-f063-3348-8687-a7037cf68ab7,Derek Thomas,158,catcher,596142,Gary Sánchez,False,True,0.007418746185230085,2,top,0,1,Strike
 823731,2026-09-27,R,4838526b-b379-3cf5-9b15-93b251baf1aa,Derek Thomas,158,catcher,596142,Gary Sánchez,False,False,0.0679075969290013,3,top,3,2,Ball
 823731,2026-09-27,R,5101fa7b-53cb-39fa-9819-7cda19722059,Derek Thomas,158,catcher,596142,Gary Sánchez,False,True,0.10289857263094837,8,top,0,0,Strike
+849845,2026-09-29,F,4ac4c9c7-d7ef-3f91-a8d9-868667d71acd,Dan Merzel,144,batter,645277,Ozzie Albies,True,True,0.21147296679061944,2,bottom,1,0,Ball
+849845,2026-09-29,F,b07e306d-76ca-3724-b309-ceea05bf9916,Dan Merzel,144,batter,671739,Michael Harris II,True,False,0.07181037326312179,4,bottom,1,0,Strike
+849845,2026-09-29,F,30ccffbe-2eaa-3941-96b5-d443d68892ab,Dan Merzel,143,catcher,592663,J.T. Realmuto,False,True,0.11796647183038211,4,bottom,0,0,Strike
+849849,2026-09-29,F,0984e402-7990-3c98-8e20-382b5ee21f3d,Alex MacKay,117,catcher,673237,Yainer Diaz,False,True,0.1047186885659046,4,top,1,1,Strike
+849849,2026-09-29,F,fe5a0c83-fb8b-37aa-b40d-418059269f21,Alex MacKay,145,batter,808959,Munetaka Murakami,True,False,0.022507049535540502,9,top,0,0,Strike
+849849,2026-09-29,F,7664c2e0-7173-3fc2-94f1-83241bbe8e00,Alex MacKay,145,catcher,691019,Kyle Teel,False,True,0.0039303453816441625,5,bottom,0,0,Strike
+849849,2026-09-29,F,d9d75795-58c7-3f18-b656-9bed636ecf1e,Alex MacKay,145,catcher,691019,Kyle Teel,False,True,0.014710104258671253,8,bottom,0,0,Strike
+849849,2026-09-29,F,108bcc31-9960-3322-a3b6-58d973a0781c,Alex MacKay,145,catcher,691019,Kyle Teel,False,True,0.08144362763940105,8,bottom,0,1,Strike
+849849,2026-09-29,F,85b3e399-d516-383a-b723-1df69e332a7d,Alex MacKay,117,batter,673237,Yainer Diaz,True,False,0.1439437331108927,8,bottom,2,1,Strike
+849851,2026-09-29,F,e04473c5-c76b-3fdc-8b97-aac53fc039de,Nate Tomlinson,147,catcher,669224,Austin Wells,False,True,0.05893840399563122,1,top,1,2,Strike
+849851,2026-09-29,F,6b4a701a-42a5-32d0-9fab-ec269390714b,Nate Tomlinson,147,batter,642708,Amed Rosario,True,True,0.14821690920201058,4,bottom,3,2,Ball
+849851,2026-09-29,F,b29dd11c-58a9-381c-955d-9a66356269bd,Nate Tomlinson,111,catcher,668939,Adley Rutschman,False,False,0.05517538772337381,8,bottom,2,0,Ball
+849843,2026-09-29,F,930ed1d1-d190-3664-a266-1fa04224120e,Ramon De Jesus,112,batter,683737,Michael Busch,True,False,0.22413239631620252,9,top,0,2,Strike
+849843,2026-09-29,F,7757adfb-d6e1-321e-9c27-4b73e5af9fd0,Ramon De Jesus,112,catcher,608348,Carson Kelly,False,True,0.07958540760480926,3,bottom,0,0,Strike
+849843,2026-09-29,F,199b7e7c-223a-3e4c-95b0-770695f4df68,Ramon De Jesus,135,batter,669720,Austin Hays,True,True,0.22850155915807946,4,bottom,0,0,Ball
+849843,2026-09-29,F,0c2e0a57-624d-3fc6-9605-2b5a240503d6,Ramon De Jesus,112,catcher,608348,Carson Kelly,False,False,0.02527876635765959,7,bottom,2,1,Ball
