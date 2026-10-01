@@ -10566,3 +10566,25 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849843,2026-09-29,F,7757adfb-d6e1-321e-9c27-4b73e5af9fd0,Ramon De Jesus,112,catcher,608348,Carson Kelly,False,True,0.07958540760480926,3,bottom,0,0,Strike
 849843,2026-09-29,F,199b7e7c-223a-3e4c-95b0-770695f4df68,Ramon De Jesus,135,batter,669720,Austin Hays,True,True,0.22850155915807946,4,bottom,0,0,Ball
 849843,2026-09-29,F,0c2e0a57-624d-3fc6-9605-2b5a240503d6,Ramon De Jesus,112,catcher,608348,Carson Kelly,False,False,0.02527876635765959,7,bottom,2,1,Ball
+849841,2026-09-30,F,d7de080a-4d78-3e9d-a971-6cd771b49d60,Adam Beck,144,catcher,669221,Sean Murphy,False,True,0.04378163459537898,1,top,0,0,Strike
+849841,2026-09-30,F,67b8f9f2-c30d-3352-9c81-eb0b9703b6b0,Adam Beck,144,catcher,669221,Sean Murphy,False,True,0.021205686888933983,4,top,0,1,Strike
+849841,2026-09-30,F,ceacc80d-0feb-305a-8910-b11b6fd53e9d,Adam Beck,143,catcher,592663,J.T. Realmuto,False,True,0.10177125681678678,5,bottom,0,1,Strike
+849841,2026-09-30,F,7d4e536e-34a3-3279-b0be-218b9c19b19c,Adam Beck,143,catcher,592663,J.T. Realmuto,False,True,0.12324259245412972,6,bottom,0,0,Strike
+849841,2026-09-30,F,27b021a2-fb38-379d-a875-c4cdfd18bb3e,Adam Beck,144,batter,669221,Sean Murphy,True,True,0.1618147755066317,7,bottom,0,0,Ball
+849841,2026-09-30,F,b6cc781b-f2c7-3cfb-a80f-eb54696329be,Adam Beck,143,catcher,592663,J.T. Realmuto,False,False,0.08489044301460826,7,bottom,2,1,Ball
+849841,2026-09-30,F,d08779e8-72c9-3d86-873b-f6a0ed38afaa,Adam Beck,144,batter,663586,Austin Riley,True,True,0.16555723879973905,8,bottom,3,0,Ball
+849841,2026-09-30,F,59b935e5-46e0-3cad-9a96-fd2948fe6375,Adam Beck,144,batter,660670,Ronald Acuña Jr.,True,False,0.1341569911571091,9,bottom,0,0,Strike
+849841,2026-09-30,F,787e5969-d7d5-3ba3-b1fb-a53a2eb0bf74,Adam Beck,144,batter,621566,Matt Olson,True,False,0.007702285164148059,10,bottom,3,2,Strike
+849841,2026-09-30,F,ac4e8e8b-763d-323e-a111-a6754a2ffdd7,Adam Beck,143,catcher,592663,J.T. Realmuto,False,True,0.043080091023091405,10,bottom,0,2,Strike
+849846,2026-09-30,F,fa8e4f9c-ec97-3fa8-aac9-da07f5695c89,Alex Tosi,117,catcher,673237,Yainer Diaz,False,False,0.12529975345291366,6,top,3,2,Ball
+849846,2026-09-30,F,e6d70f3b-2e09-30b7-af77-7c566986122a,Alex Tosi,145,batter,678246,Miguel Vargas,True,False,0.008136701851842454,9,top,2,2,Strike
+849846,2026-09-30,F,33afd187-61fa-33d0-b2c8-4b0e0653a226,Alex Tosi,145,batter,808959,Munetaka Murakami,True,False,0.15543045504987318,9,top,2,1,Strike
+849846,2026-09-30,F,d1b6ea77-ca90-3b20-bcf4-4f9fd153c018,Alex Tosi,145,catcher,691019,Kyle Teel,False,True,0.014223079281915574,2,bottom,0,0,Strike
+849846,2026-09-30,F,c4101650-dcd5-3fcd-8f21-d02846b05440,Alex Tosi,145,catcher,691019,Kyle Teel,False,True,0.03305391680974497,3,bottom,0,0,Strike
+849846,2026-09-30,F,fada4afb-7526-3804-8a68-5e30c60fc659,Alex Tosi,117,batter,828599,Lucas Spence,True,True,0.11147533443065806,9,bottom,2,2,Ball
+849848,2026-09-30,F,cc350dce-ab5a-3f2e-a789-5bd3e016a481,Scott Barry,147,catcher,669224,Austin Wells,False,False,0.0009505232503224242,3,top,0,0,Ball
+849848,2026-09-30,F,f4cc76f1-d3bd-3044-acd8-444d1d36c553,Scott Barry,111,catcher,668939,Adley Rutschman,False,True,0.10474561044960462,2,bottom,0,1,Strike
+849842,2026-09-30,F,cda9ab1f-4fd6-3c18-8426-c188054780ea,Erich Bacchus,112,batter,691718,Pete Crow-Armstrong,True,False,0.09867699060093538,1,top,1,2,Strike
+849842,2026-09-30,F,88eb00e7-bf97-30ff-9844-7e6331c6cc20,Erich Bacchus,135,catcher,806956,Ethan Salas,False,True,0.17961470674915891,1,top,3,0,Strike
+849842,2026-09-30,F,6d1a5e39-4d34-3ba5-9323-6a7095bd64e4,Erich Bacchus,135,catcher,806956,Ethan Salas,False,False,0.06266765158700839,3,top,3,2,Ball
+849842,2026-09-30,F,4df9bcfa-54d3-3901-86e3-dbba3d4504cd,Erich Bacchus,112,catcher,608348,Carson Kelly,False,False,0.022820836658172597,3,bottom,2,2,Ball
