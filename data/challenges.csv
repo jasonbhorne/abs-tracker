@@ -10588,3 +10588,6 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849842,2026-09-30,F,88eb00e7-bf97-30ff-9844-7e6331c6cc20,Erich Bacchus,135,catcher,806956,Ethan Salas,False,True,0.17961470674915891,1,top,3,0,Strike
 849842,2026-09-30,F,6d1a5e39-4d34-3ba5-9323-6a7095bd64e4,Erich Bacchus,135,catcher,806956,Ethan Salas,False,False,0.06266765158700839,3,top,3,2,Ball
 849842,2026-09-30,F,4df9bcfa-54d3-3901-86e3-dbba3d4504cd,Erich Bacchus,112,catcher,608348,Carson Kelly,False,False,0.022820836658172597,3,bottom,2,2,Ball
+849844,2026-10-01,F,d8b15000-8d78-3ed5-81c5-11c30ccee1ac,Mark Ripperger,144,catcher,686948,Drake Baldwin,False,False,0.032244489986783545,7,top,1,2,Ball
+849844,2026-10-01,F,73389231-75bd-3cae-a026-aeec2b2b6f68,Mark Ripperger,144,batter,660670,Ronald Acuña Jr.,True,True,0.05760511460973396,1,bottom,1,0,Ball
+849844,2026-10-01,F,075b4d57-2ad3-3b3f-abc9-f52257d9a97e,Mark Ripperger,143,catcher,592663,J.T. Realmuto,False,True,0.12687683705542963,6,bottom,0,2,Strike
