@@ -10591,3 +10591,27 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849844,2026-10-01,F,d8b15000-8d78-3ed5-81c5-11c30ccee1ac,Mark Ripperger,144,catcher,686948,Drake Baldwin,False,False,0.032244489986783545,7,top,1,2,Ball
 849844,2026-10-01,F,73389231-75bd-3cae-a026-aeec2b2b6f68,Mark Ripperger,144,batter,660670,Ronald Acuña Jr.,True,True,0.05760511460973396,1,bottom,1,0,Ball
 849844,2026-10-01,F,075b4d57-2ad3-3b3f-abc9-f52257d9a97e,Mark Ripperger,143,catcher,592663,J.T. Realmuto,False,True,0.12687683705542963,6,bottom,0,2,Strike
+849829,2026-10-03,D,40c65611-d556-3616-aaaa-82932350bf74,Cory Blaser,114,catcher,595978,Austin Hedges,False,True,0.40708011795426724,4,top,0,1,Strike
+849829,2026-10-03,D,675da268-861f-3447-92f8-53739840d7eb,Cory Blaser,145,batter,678246,Miguel Vargas,True,True,0.2515381463552039,6,top,0,0,Ball
+849829,2026-10-03,D,1cc144ac-b4b0-323a-838f-874269081c93,Cory Blaser,145,catcher,691019,Kyle Teel,False,False,0.058450589138143175,3,bottom,1,0,Ball
+849829,2026-10-03,D,977192d0-4187-3232-be11-fc0d1d3ab59e,Cory Blaser,145,catcher,691019,Kyle Teel,False,True,0.2348993706770961,6,bottom,0,1,Strike
+849829,2026-10-03,D,2290c454-03a8-33a1-9e40-04d270e524a3,Cory Blaser,145,catcher,691019,Kyle Teel,False,True,0.028160407355205086,7,bottom,1,1,Strike
+849828,2026-10-03,D,d616ddfa-0afe-3f87-824c-f287f82b4e17,Roberto Ortiz,144,batter,671739,Michael Harris II,True,True,0.12591254029833543,2,top,0,2,Ball
+849828,2026-10-03,D,df069c87-aa5f-3a1a-ad21-42bc96501e70,Roberto Ortiz,119,catcher,669257,Will Smith,False,True,0.27700858119875105,2,top,1,2,Strike
+849828,2026-10-03,D,8407ee45-bdc3-3f7c-b1dd-35694d008d9e,Roberto Ortiz,144,batter,669221,Sean Murphy,True,False,0.01582718450243399,6,top,0,0,Strike
+849828,2026-10-03,D,5bfc1cb3-156e-3b9f-83b0-6dea03246fed,Roberto Ortiz,144,batter,621566,Matt Olson,True,True,0.13597934454997795,6,top,0,0,Ball
+849828,2026-10-03,D,4e4b4c5b-7459-3d9c-a67e-c4c4cac67d96,Roberto Ortiz,144,batter,660670,Ronald Acuña Jr.,True,True,0.10475530578464277,9,top,0,2,Ball
+849828,2026-10-03,D,e43eab67-441d-3758-b78a-19a123501329,Roberto Ortiz,119,catcher,669257,Will Smith,False,False,0.06149894132581972,9,top,2,2,Ball
+849828,2026-10-03,D,dafcbb58-3d89-3fbb-8298-f79f41c5d154,Roberto Ortiz,144,catcher,669221,Sean Murphy,False,True,0.06590991137015056,2,bottom,0,0,Strike
+849828,2026-10-03,D,5b184dce-7fb7-3cb8-b5af-ee71d21cce0c,Roberto Ortiz,119,batter,681624,Andy Pages,True,False,0.21704066679819722,2,bottom,2,2,Strike
+849828,2026-10-03,D,432decc0-b42c-3e93-86df-aca8a876f90d,Roberto Ortiz,144,catcher,669221,Sean Murphy,False,True,0.38748282106379106,8,bottom,0,0,Strike
+849835,2026-10-03,D,356a732f-3607-3c82-88ed-0449d7cd24ed,Shane Livensparger,139,catcher,689414,Liam Hicks,False,True,0.09334037526725147,6,top,0,0,Strike
+849835,2026-10-03,D,d89a7222-ab75-3843-bedd-0021ac9c4454,Shane Livensparger,147,batter,669224,Austin Wells,True,True,0.2439413205821388,8,top,0,0,Ball
+849835,2026-10-03,D,6709732a-32cd-3a67-810d-cf1f91739523,Shane Livensparger,147,batter,641355,Cody Bellinger,True,True,0.19783562637615937,9,top,0,0,Ball
+849835,2026-10-03,D,98ca1231-bc29-3617-8380-ae8306a192fc,Shane Livensparger,139,catcher,689414,Liam Hicks,False,False,0.2688122462189443,9,top,1,1,Ball
+849835,2026-10-03,D,221ed9a0-f49b-3ad2-b3bc-a6121c9902a9,Shane Livensparger,147,catcher,669224,Austin Wells,False,True,0.05822113014182184,1,bottom,0,0,Strike
+849835,2026-10-03,D,cb7e68c7-1039-3e81-ab33-3f90eca18ba7,Shane Livensparger,147,catcher,669224,Austin Wells,False,True,0.01688316981499749,1,bottom,1,2,Strike
+849830,2026-10-03,D,8ae74747-44b1-3571-a8d1-4f3a4f11521a,Nick Mahrley,158,catcher,661388,William Contreras,False,False,0.016092740802271757,4,top,0,2,Ball
+849830,2026-10-03,D,b76b0534-3eae-3f5a-ba2c-97bb83f2815e,Nick Mahrley,135,batter,592518,Manny Machado,True,True,0.0323208379724227,5,top,3,1,Ball
+849830,2026-10-03,D,a35ab92d-f370-3b18-aed7-d0f3b9d0a375,Nick Mahrley,135,batter,593428,Xander Bogaerts,True,True,0.14981266131124982,6,top,1,1,Ball
+849830,2026-10-03,D,5a0fabe4-5631-3a0f-a677-5b89582d87bf,Nick Mahrley,158,catcher,661388,William Contreras,False,False,0.008404444453627216,8,top,1,1,Ball
