@@ -10632,3 +10632,7 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849823,2026-10-04,D,130b4c23-22f8-3c58-ae5f-0a2f7c4355c6,Chris Guccione,119,batter,669257,Will Smith,True,False,0.11852408728819364,8,bottom,2,2,Strike
 849823,2026-10-04,D,1ebc5a06-d548-324d-880c-72016b8fe1cb,Chris Guccione,144,catcher,686948,Drake Baldwin,False,True,0.052254350832016794,8,bottom,2,2,Strike
 849823,2026-10-04,D,3b80f5c4-d3a1-341f-917a-60f12a9bf406,Chris Guccione,144,catcher,686948,Drake Baldwin,False,True,0.052441179088575596,9,bottom,0,0,Strike
+849834,2026-10-05,D,2219e9e7-9af8-3ef6-8f27-34531ebeb873,Gabe Morales,114,catcher,672275,Patrick Bailey,False,False,0.006038004135480959,3,top,1,2,Ball
+849834,2026-10-05,D,39fa1410-c867-3c30-bbb2-11bfd2729863,Gabe Morales,145,batter,803011,Sam Antonacci,True,False,0.21215399621068998,3,top,0,1,Strike
+849839,2026-10-05,D,ecb62243-f270-37c4-a56c-0adeee4190a2,Jeremie Rehak,147,batter,682987,Spencer Jones,True,True,0.09520443008281389,9,top,1,1,Ball
+849839,2026-10-05,D,ac35bdb4-d997-31b9-a727-803e3e2dc2f2,Jeremie Rehak,139,catcher,689414,Liam Hicks,False,True,0.037868427888150924,9,top,2,1,Strike
