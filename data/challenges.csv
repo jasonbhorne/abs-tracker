@@ -10636,3 +10636,11 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849834,2026-10-05,D,39fa1410-c867-3c30-bbb2-11bfd2729863,Gabe Morales,145,batter,803011,Sam Antonacci,True,False,0.21215399621068998,3,top,0,1,Strike
 849839,2026-10-05,D,ecb62243-f270-37c4-a56c-0adeee4190a2,Jeremie Rehak,147,batter,682987,Spencer Jones,True,True,0.09520443008281389,9,top,1,1,Ball
 849839,2026-10-05,D,ac35bdb4-d997-31b9-a727-803e3e2dc2f2,Jeremie Rehak,139,catcher,689414,Liam Hicks,False,True,0.037868427888150924,9,top,2,1,Strike
+849819,2026-10-06,D,ed671d89-9ee8-3016-97b9-6992286b7770,James Hoye,119,batter,660271,Shohei Ohtani,True,False,0.07832679159090605,5,top,3,0,Strike
+849819,2026-10-06,D,272d4117-b254-3aab-9a44-8b3a2cd37028,James Hoye,144,batter,660670,Ronald Acuña Jr.,True,False,0.0735556399086138,1,bottom,2,2,Strike
+849826,2026-10-06,D,5dfd3ec5-cd0b-309d-b56a-4bb83bfa0e5d,Alfonso Márquez,135,catcher,806956,Ethan Salas,False,False,0.03824939497630432,2,top,1,0,Ball
+849826,2026-10-06,D,50708553-e49b-36cd-ab2d-145e99d75ab0,Alfonso Márquez,158,batter,687401,Joey Ortiz,True,True,0.18329530168319497,6,top,1,0,Ball
+849826,2026-10-06,D,4a16492a-e53e-36c7-853e-d402f49ddb29,Alfonso Márquez,158,batter,661388,William Contreras,True,False,0.19475348353731403,9,top,0,0,Strike
+849826,2026-10-06,D,0e610d43-a2cd-37d7-a227-c88742c575db,Alfonso Márquez,135,catcher,806956,Ethan Salas,False,False,0.14366385570090145,9,top,3,2,Ball
+849826,2026-10-06,D,c6727bf5-802c-3ee6-881a-299806a752fb,Alfonso Márquez,158,catcher,661388,William Contreras,False,False,0.04596742644959874,1,bottom,0,0,Ball
+849826,2026-10-06,D,5c318812-0862-3c92-955e-730a89851863,Alfonso Márquez,158,catcher,661388,William Contreras,False,True,0.0785301685648353,6,bottom,2,0,Strike
