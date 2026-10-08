@@ -10644,3 +10644,18 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849826,2026-10-06,D,0e610d43-a2cd-37d7-a227-c88742c575db,Alfonso Márquez,135,catcher,806956,Ethan Salas,False,False,0.14366385570090145,9,top,3,2,Ball
 849826,2026-10-06,D,c6727bf5-802c-3ee6-881a-299806a752fb,Alfonso Márquez,158,catcher,661388,William Contreras,False,False,0.04596742644959874,1,bottom,0,0,Ball
 849826,2026-10-06,D,5c318812-0862-3c92-955e-730a89851863,Alfonso Márquez,158,catcher,661388,William Contreras,False,True,0.0785301685648353,6,bottom,2,0,Strike
+849833,2026-10-07,D,c7318de6-f84c-3ff5-8f91-c1345b15a979,Todd Tichenor,145,catcher,691019,Kyle Teel,False,False,0.0831866571069534,3,top,2,1,Ball
+849833,2026-10-07,D,28c22509-8b03-3f15-9760-c2a204a23df0,Todd Tichenor,145,catcher,691019,Kyle Teel,False,False,0.011479872062791788,3,top,0,0,Ball
+849833,2026-10-07,D,bfb172b5-c20a-39e7-ac32-704682174f2c,Todd Tichenor,145,batter,671976,Tristan Peters,True,True,0.08081787196256253,1,bottom,0,2,Ball
+849833,2026-10-07,D,61d3b76f-776b-375d-906a-d3653294cf66,Todd Tichenor,114,catcher,672275,Patrick Bailey,False,True,0.19627370927528665,3,bottom,0,0,Strike
+849833,2026-10-07,D,1a3e8e0d-0c6d-3915-9841-79bd870da226,Todd Tichenor,114,catcher,672275,Patrick Bailey,False,False,0.20666508800628758,9,bottom,0,1,Ball
+849833,2026-10-07,D,c9cd8c8f-c894-3e58-b98b-3111fe873a61,Todd Tichenor,114,catcher,672275,Patrick Bailey,False,True,0.0633874634280136,9,bottom,1,2,Strike
+849833,2026-10-07,D,02b28423-6123-3d11-89ea-48f9bc19ba17,Todd Tichenor,114,catcher,672275,Patrick Bailey,False,True,0.08373577142847699,9,bottom,0,1,Strike
+849822,2026-10-07,D,72658e12-9986-3abc-a2b6-0877f36c949c,Tripp Gibson,144,batter,645277,Ozzie Albies,True,False,0.0007473493520655516,4,bottom,0,0,Strike
+849822,2026-10-07,D,11e8859a-1d72-3010-9405-f1f306df83e8,Tripp Gibson,144,batter,686948,Drake Baldwin,True,False,0.06552843149936527,8,bottom,2,2,Strike
+849838,2026-10-07,D,d0514d98-5680-33a6-bec2-d62fd41ac8ad,Dan Bellino,147,batter,669224,Austin Wells,True,False,0.13929930600334361,2,bottom,2,1,Strike
+849838,2026-10-07,D,933c8795-acd1-3a8b-b887-8b0adc6bac13,Dan Bellino,147,batter,806146,George Lombard Jr.,True,True,0.16239910519550638,6,bottom,3,1,Ball
+849838,2026-10-07,D,45627734-4b10-38f6-ae6a-35da2b0adacb,Dan Bellino,139,pitcher,643377,Griffin Jax,False,True,0.03440036627605947,6,bottom,3,2,Strike
+849838,2026-10-07,D,e231e971-b497-3283-b9ed-40d5a8fabf95,Dan Bellino,139,catcher,689414,Liam Hicks,False,False,0.08835348071525496,9,bottom,1,0,Ball
+849827,2026-10-07,D,dacca119-ab8f-374e-a86d-2f8c0a61690b,Nic Lentz,158,batter,806198,Cooper Pratt,True,False,0.1434412422269551,7,top,2,0,Strike
+849827,2026-10-07,D,5f24356e-f87b-3086-b8d0-a3fb4378e28e,Nic Lentz,158,catcher,661388,William Contreras,False,False,0.0038697833196382897,1,bottom,0,0,Ball
