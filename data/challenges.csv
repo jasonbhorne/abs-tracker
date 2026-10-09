@@ -10659,3 +10659,10 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849838,2026-10-07,D,e231e971-b497-3283-b9ed-40d5a8fabf95,Dan Bellino,139,catcher,689414,Liam Hicks,False,False,0.08835348071525496,9,bottom,1,0,Ball
 849827,2026-10-07,D,dacca119-ab8f-374e-a86d-2f8c0a61690b,Nic Lentz,158,batter,806198,Cooper Pratt,True,False,0.1434412422269551,7,top,2,0,Strike
 849827,2026-10-07,D,5f24356e-f87b-3086-b8d0-a3fb4378e28e,Nic Lentz,158,catcher,661388,William Contreras,False,False,0.0038697833196382897,1,bottom,0,0,Ball
+849832,2026-10-08,D,816b240d-7ede-37fb-ae66-4c90951b4b96,Jansen Visconti,145,catcher,691019,Kyle Teel,False,False,0.17966501460236994,1,top,3,2,Ball
+849832,2026-10-08,D,7b388969-3d78-3bc7-acc9-e672acfff551,Jansen Visconti,114,batter,680757,Steven Kwan,True,True,0.10016223987657537,6,top,0,0,Ball
+849832,2026-10-08,D,63021d5f-6642-3a31-9d31-170e847f4448,Jansen Visconti,114,catcher,595978,Austin Hedges,False,True,0.06124654069502755,3,bottom,0,1,Strike
+849832,2026-10-08,D,a6d066ad-0c96-31ed-8d7f-6889fb519110,Jansen Visconti,114,catcher,672275,Patrick Bailey,False,True,0.0662568416653733,5,bottom,2,0,Strike
+849832,2026-10-08,D,0eb5a536-a518-334e-8226-069bf820936b,Jansen Visconti,145,batter,803011,Sam Antonacci,True,True,0.10239691587794743,7,bottom,0,0,Ball
+849832,2026-10-08,D,3ff50d08-5f5e-38ee-8d81-9e60383181b2,Jansen Visconti,114,catcher,672275,Patrick Bailey,False,False,0.024741708621314876,7,bottom,0,0,Ball
+849832,2026-10-08,D,da73fd86-70d7-3113-9280-5dc2e6fac2c4,Jansen Visconti,114,catcher,672275,Patrick Bailey,False,False,0.067992273443667,9,bottom,2,0,Ball
