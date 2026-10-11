@@ -10666,3 +10666,8 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849832,2026-10-08,D,0eb5a536-a518-334e-8226-069bf820936b,Jansen Visconti,145,batter,803011,Sam Antonacci,True,True,0.10239691587794743,7,bottom,0,0,Ball
 849832,2026-10-08,D,3ff50d08-5f5e-38ee-8d81-9e60383181b2,Jansen Visconti,114,catcher,672275,Patrick Bailey,False,False,0.024741708621314876,7,bottom,0,0,Ball
 849832,2026-10-08,D,da73fd86-70d7-3113-9280-5dc2e6fac2c4,Jansen Visconti,114,catcher,672275,Patrick Bailey,False,False,0.067992273443667,9,bottom,2,0,Ball
+849831,2026-10-10,D,f2d9d10f-8730-31c0-af41-8b10bd576ed9,Vic Carapazza,114,catcher,672275,Patrick Bailey,False,False,0.09467458213817827,3,top,0,0,Ball
+849831,2026-10-10,D,d1f698ec-7136-34d3-9823-6e14d774fca0,Vic Carapazza,145,batter,678246,Miguel Vargas,True,True,0.061725953588456464,6,top,0,0,Ball
+849831,2026-10-10,D,35aee013-6ebd-3e6c-aa3e-7eeb57e34767,Vic Carapazza,114,catcher,672275,Patrick Bailey,False,False,0.15166166823116378,6,top,1,2,Ball
+849831,2026-10-10,D,2d3002d0-6cfa-39a1-a6d3-c76672cf7813,Vic Carapazza,145,batter,671976,Tristan Peters,True,False,0.28062705710184854,9,top,1,1,Strike
+849831,2026-10-10,D,8aa822d6-481e-3a5e-8873-ffc57c3a1d4f,Vic Carapazza,145,catcher,691019,Kyle Teel,False,True,0.07573673724610419,3,bottom,2,0,Strike
