@@ -10671,3 +10671,9 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849831,2026-10-10,D,35aee013-6ebd-3e6c-aa3e-7eeb57e34767,Vic Carapazza,114,catcher,672275,Patrick Bailey,False,False,0.15166166823116378,6,top,1,2,Ball
 849831,2026-10-10,D,2d3002d0-6cfa-39a1-a6d3-c76672cf7813,Vic Carapazza,145,batter,671976,Tristan Peters,True,False,0.28062705710184854,9,top,1,1,Strike
 849831,2026-10-10,D,8aa822d6-481e-3a5e-8873-ffc57c3a1d4f,Vic Carapazza,145,catcher,691019,Kyle Teel,False,True,0.07573673724610419,3,bottom,2,0,Strike
+849809,2026-10-11,L,93066806-74a9-359a-a329-17d20cc84cd1,Edwin Moscoso,119,batter,605141,Mookie Betts,True,True,0.14606383133009726,3,top,1,0,Ball
+849809,2026-10-11,L,107665c1-829a-37af-a359-907f2bc9c1d4,Edwin Moscoso,158,catcher,661388,William Contreras,False,True,0.032780028268257766,3,top,0,0,Strike
+849809,2026-10-11,L,cc76ceac-43c2-3b4c-a280-19d93a4d8371,Edwin Moscoso,158,catcher,661388,William Contreras,False,False,0.06721385024264372,9,top,1,0,Ball
+849809,2026-10-11,L,6c63c618-74bb-37fa-9bf0-af81b0d93f23,Edwin Moscoso,158,catcher,661388,William Contreras,False,True,0.07912257050774052,9,top,2,1,Strike
+849809,2026-10-11,L,839c4f12-1a0f-3648-8676-fbf60e3079c2,Edwin Moscoso,119,catcher,669257,Will Smith,False,True,0.1892910983118231,4,bottom,1,0,Strike
+849809,2026-10-11,L,ed7220bd-c6e0-336a-a068-31bc5706e1c2,Edwin Moscoso,119,catcher,669257,Will Smith,False,False,0.13302995791932593,4,bottom,2,1,Ball
