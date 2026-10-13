@@ -10677,3 +10677,10 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849809,2026-10-11,L,6c63c618-74bb-37fa-9bf0-af81b0d93f23,Edwin Moscoso,158,catcher,661388,William Contreras,False,True,0.07912257050774052,9,top,2,1,Strike
 849809,2026-10-11,L,839c4f12-1a0f-3648-8676-fbf60e3079c2,Edwin Moscoso,119,catcher,669257,Will Smith,False,True,0.1892910983118231,4,bottom,1,0,Strike
 849809,2026-10-11,L,ed7220bd-c6e0-336a-a068-31bc5706e1c2,Edwin Moscoso,119,catcher,669257,Will Smith,False,False,0.13302995791932593,4,bottom,2,1,Ball
+849812,2026-10-12,L,c7787299-59b0-3f31-84a4-b93583017ca2,Chris Segal,119,batter,605141,Mookie Betts,True,True,0.1440143526293477,1,top,2,2,Ball
+849812,2026-10-12,L,4747812f-6d74-3046-9cae-828c3e70dcae,Chris Segal,158,catcher,661388,William Contreras,False,True,0.216919054628399,2,top,1,0,Strike
+849812,2026-10-12,L,93ee359d-0239-39d0-be51-27e3f7763429,Chris Segal,158,catcher,661388,William Contreras,False,False,0.06350999046801876,5,top,0,0,Ball
+849812,2026-10-12,L,c96fc328-e628-317a-a319-8e9cee716e7b,Chris Segal,119,batter,663656,Kyle Tucker,True,True,0.06015901216448906,7,top,1,1,Ball
+849820,2026-10-12,L,5a6a3abd-b23b-3b0b-875e-0670e881d487,Nestor Ceja,139,catcher,689414,Liam Hicks,False,True,0.06640783044178411,8,top,2,2,Strike
+849820,2026-10-12,L,53fedf74-6da7-3c41-a947-c506ccdf61bf,Nestor Ceja,114,batter,680757,Steven Kwan,True,True,0.2794434981356118,9,top,0,0,Ball
+849820,2026-10-12,L,aa109483-fbef-309e-8aa6-98282871c360,Nestor Ceja,114,catcher,672275,Patrick Bailey,False,False,0.0956867664999035,8,bottom,0,0,Ball
