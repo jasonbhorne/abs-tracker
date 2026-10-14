@@ -10684,3 +10684,7 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849820,2026-10-12,L,5a6a3abd-b23b-3b0b-875e-0670e881d487,Nestor Ceja,139,catcher,689414,Liam Hicks,False,True,0.06640783044178411,8,top,2,2,Strike
 849820,2026-10-12,L,53fedf74-6da7-3c41-a947-c506ccdf61bf,Nestor Ceja,114,batter,680757,Steven Kwan,True,True,0.2794434981356118,9,top,0,0,Ball
 849820,2026-10-12,L,aa109483-fbef-309e-8aa6-98282871c360,Nestor Ceja,114,catcher,672275,Patrick Bailey,False,False,0.0956867664999035,8,bottom,0,0,Ball
+849813,2026-10-13,L,ebca5e34-5dbc-33c6-a6ae-b6951ac75ae5,Carlos Torres,139,catcher,689414,Liam Hicks,False,True,0.05719581687413133,1,top,0,1,Strike
+849813,2026-10-13,L,054bb9c1-2c6e-3ff1-8f19-a457c6b16518,Carlos Torres,114,batter,680757,Steven Kwan,True,True,0.22386737854482663,3,top,1,1,Ball
+849813,2026-10-13,L,2cd816dc-894f-3297-8453-cf41508212b6,Carlos Torres,139,catcher,689414,Liam Hicks,False,False,0.23677721635771076,6,top,0,0,Ball
+849813,2026-10-13,L,b7a43c87-ac45-3444-9049-ad659a16f6cb,Carlos Torres,114,batter,672275,Patrick Bailey,True,True,0.20507165713044345,7,top,3,2,Ball
