@@ -10688,3 +10688,7 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849813,2026-10-13,L,054bb9c1-2c6e-3ff1-8f19-a457c6b16518,Carlos Torres,114,batter,680757,Steven Kwan,True,True,0.22386737854482663,3,top,1,1,Ball
 849813,2026-10-13,L,2cd816dc-894f-3297-8453-cf41508212b6,Carlos Torres,139,catcher,689414,Liam Hicks,False,False,0.23677721635771076,6,top,0,0,Ball
 849813,2026-10-13,L,b7a43c87-ac45-3444-9049-ad659a16f6cb,Carlos Torres,114,batter,672275,Patrick Bailey,True,True,0.20507165713044345,7,top,3,2,Ball
+849811,2026-10-14,L,7b75ea7b-f708-36b3-a7b8-0fd9ab9845ca,Mark Wegner,119,catcher,669257,Will Smith,False,True,0.19098993383151164,4,top,0,2,Strike
+849811,2026-10-14,L,adcf9c5e-1882-34ab-98b9-92a4a5a61e02,Mark Wegner,158,catcher,661388,William Contreras,False,True,0.06698865778164986,1,bottom,1,2,Strike
+849811,2026-10-14,L,591818e2-d811-3323-b790-1905e410d929,Mark Wegner,119,batter,669257,Will Smith,True,True,0.10097942686456986,4,bottom,0,2,Ball
+849811,2026-10-14,L,aaac38c7-84fa-3cf9-8ba5-93f9c76ac13d,Mark Wegner,119,batter,605141,Mookie Betts,True,True,0.24367822993804045,9,bottom,0,1,Ball
