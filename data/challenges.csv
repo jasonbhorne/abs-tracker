@@ -10692,3 +10692,16 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849811,2026-10-14,L,adcf9c5e-1882-34ab-98b9-92a4a5a61e02,Mark Wegner,158,catcher,661388,William Contreras,False,True,0.06698865778164986,1,bottom,1,2,Strike
 849811,2026-10-14,L,591818e2-d811-3323-b790-1905e410d929,Mark Wegner,119,batter,669257,Will Smith,True,True,0.10097942686456986,4,bottom,0,2,Ball
 849811,2026-10-14,L,aaac38c7-84fa-3cf9-8ba5-93f9c76ac13d,Mark Wegner,119,batter,605141,Mookie Betts,True,True,0.24367822993804045,9,bottom,0,1,Ball
+849818,2026-10-15,L,0b9c99ae-2c27-3919-baa1-2b992a5f64af,Bill Miller,114,catcher,672275,Patrick Bailey,False,False,0.19045683215109743,9,top,0,0,Ball
+849818,2026-10-15,L,e4ef03ae-82d9-3b93-a57f-0b1be424b8a4,Bill Miller,114,batter,666176,Jo Adell,True,True,0.0667859313104018,2,bottom,1,2,Ball
+849818,2026-10-15,L,8926d2c2-b192-3d09-9cbc-9c44d6997280,Bill Miller,139,catcher,689414,Liam Hicks,False,False,0.06191022210473142,2,bottom,3,2,Ball
+849818,2026-10-15,L,521068cb-d09b-31fe-a05c-f1abb629f8b1,Bill Miller,139,catcher,689414,Liam Hicks,False,True,0.1449810080453937,6,bottom,3,2,Strike
+849818,2026-10-15,L,d795a19c-5982-3b71-8acf-7248e3c6d8cb,Bill Miller,139,catcher,689414,Liam Hicks,False,True,0.3375231316927132,7,bottom,0,0,Strike
+849818,2026-10-15,L,6b5afa9d-9138-35ad-88a5-e4110d84e5a4,Bill Miller,139,catcher,689414,Liam Hicks,False,True,0.339497089789906,8,bottom,0,1,Strike
+849810,2026-10-15,L,2a66e911-03ad-3312-8d53-bb7e8328aeb4,Ryan Additon,119,catcher,669257,Will Smith,False,False,0.09919508103255172,4,top,2,1,Ball
+849810,2026-10-15,L,48e43922-84c1-3f2c-9680-c5f966f7e3bf,Ryan Additon,119,catcher,669257,Will Smith,False,False,0.12290297798245799,9,top,0,0,Ball
+849810,2026-10-15,L,a89dad56-4da5-3450-8381-7f84cf05b5db,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.004102066575778829,1,bottom,0,1,Strike
+849810,2026-10-15,L,c7c714d1-85bf-31e2-86a3-38c7f87dabd2,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.05845889078560618,2,bottom,1,1,Strike
+849810,2026-10-15,L,abbd8806-4d60-3567-b47c-a706105cac24,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.08042230271862894,4,bottom,0,1,Strike
+849810,2026-10-15,L,740ccbb0-dacf-3ebb-97ac-0754dd2fb7f7,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.05434389993565292,5,bottom,0,0,Strike
+849810,2026-10-15,L,7a92dfad-752c-3591-bb51-35a1659e0ee2,Ryan Additon,158,catcher,661388,William Contreras,False,False,0.025083025447141374,8,bottom,2,2,Ball
