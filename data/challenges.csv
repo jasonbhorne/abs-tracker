@@ -10705,3 +10705,4 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849810,2026-10-15,L,abbd8806-4d60-3567-b47c-a706105cac24,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.08042230271862894,4,bottom,0,1,Strike
 849810,2026-10-15,L,740ccbb0-dacf-3ebb-97ac-0754dd2fb7f7,Ryan Additon,158,catcher,661388,William Contreras,False,True,0.05434389993565292,5,bottom,0,0,Strike
 849810,2026-10-15,L,7a92dfad-752c-3591-bb51-35a1659e0ee2,Ryan Additon,158,catcher,661388,William Contreras,False,False,0.025083025447141374,8,bottom,2,2,Ball
+849816,2026-10-17,L,000874c4-829a-32a3-96c3-0d00b1db06f8,Mark Ripperger,114,catcher,672275,Patrick Bailey,False,False,0.012135918753123268,5,top,1,1,Ball
