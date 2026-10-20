@@ -10709,3 +10709,6 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849817,2026-10-18,L,d5eebc7e-91b9-37db-bff6-b9f1852d8ee8,Jordan Baker,114,catcher,672275,Patrick Bailey,False,False,0.18210782450999902,1,top,3,1,Ball
 849817,2026-10-18,L,63d7fa09-3a89-38c6-9da3-670c36a00165,Jordan Baker,114,batter,666176,Jo Adell,True,True,0.06793255374995578,4,bottom,3,2,Ball
 849817,2026-10-18,L,1aa0f3f6-e741-336a-8e91-7609b701cf45,Jordan Baker,114,batter,800050,Chase DeLauter,True,False,0.04472292537278122,9,bottom,1,1,Strike
+849815,2026-10-19,L,f3754b19-16af-32ab-bf7f-d36dd2bbb461,Chad Fairchild,139,catcher,689414,Liam Hicks,False,True,0.06750229786806294,3,top,2,2,Strike
+849815,2026-10-19,L,d128c847-a2fe-35e0-8fc8-973f55b65d13,Chad Fairchild,114,batter,672275,Patrick Bailey,True,True,0.15256766972505464,8,top,1,1,Ball
+849815,2026-10-19,L,b604a892-2c03-36f7-a4e9-419bf1d47b8a,Chad Fairchild,114,catcher,672275,Patrick Bailey,False,False,0.07831966209452314,2,bottom,2,0,Ball
