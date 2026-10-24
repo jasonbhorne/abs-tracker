@@ -10712,3 +10712,6 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849815,2026-10-19,L,f3754b19-16af-32ab-bf7f-d36dd2bbb461,Chad Fairchild,139,catcher,689414,Liam Hicks,False,True,0.06750229786806294,3,top,2,2,Strike
 849815,2026-10-19,L,d128c847-a2fe-35e0-8fc8-973f55b65d13,Chad Fairchild,114,batter,672275,Patrick Bailey,True,True,0.15256766972505464,8,top,1,1,Ball
 849815,2026-10-19,L,b604a892-2c03-36f7-a4e9-419bf1d47b8a,Chad Fairchild,114,catcher,672275,Patrick Bailey,False,False,0.07831966209452314,2,bottom,2,0,Ball
+849805,2026-10-23,W,5c3c2314-0cbb-38a4-bbfb-2c3a171a76e3,Gabe Morales,158,catcher,661388,William Contreras,False,True,0.12124247710965363,2,top,0,1,Strike
+849805,2026-10-23,W,80b63eb9-53c8-3a5a-831e-519754c95475,Gabe Morales,158,catcher,661388,William Contreras,False,True,0.14339676209891195,6,top,1,0,Strike
+849805,2026-10-23,W,1bbaeb5c-544d-3275-8c1c-be81c7b32ffd,Gabe Morales,139,catcher,689414,Liam Hicks,False,False,0.0462587980292858,7,bottom,0,0,Ball
