@@ -10715,3 +10715,8 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849805,2026-10-23,W,5c3c2314-0cbb-38a4-bbfb-2c3a171a76e3,Gabe Morales,158,catcher,661388,William Contreras,False,True,0.12124247710965363,2,top,0,1,Strike
 849805,2026-10-23,W,80b63eb9-53c8-3a5a-831e-519754c95475,Gabe Morales,158,catcher,661388,William Contreras,False,True,0.14339676209891195,6,top,1,0,Strike
 849805,2026-10-23,W,1bbaeb5c-544d-3275-8c1c-be81c7b32ffd,Gabe Morales,139,catcher,689414,Liam Hicks,False,False,0.0462587980292858,7,bottom,0,0,Ball
+849802,2026-10-24,W,7ba3b96f-d0a8-36e2-b614-c7a8a28217c8,Jim Wolf,158,catcher,661388,William Contreras,False,True,0.15520292025687454,1,top,0,1,Strike
+849802,2026-10-24,W,fe18577e-b55e-3d32-8439-b2e117751dc2,Jim Wolf,158,catcher,661388,William Contreras,False,False,0.0326438120611391,2,top,2,1,Ball
+849802,2026-10-24,W,8e24c0f5-7a45-3a1d-88e2-570b83626561,Jim Wolf,158,catcher,661388,William Contreras,False,False,0.07521076178932053,9,top,0,0,Ball
+849802,2026-10-24,W,b9ed66b1-1846-3631-bbda-2781f7aeae39,Jim Wolf,139,batter,683748,Victor Mesa Jr.,True,False,0.08877719229137337,9,top,0,0,Strike
+849802,2026-10-24,W,138dcc11-4403-3d85-b27c-f3be131222ef,Jim Wolf,139,catcher,663743,Nick Fortes,False,True,0.018548787964171698,8,bottom,0,0,Strike
