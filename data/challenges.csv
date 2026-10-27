@@ -10720,3 +10720,11 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849802,2026-10-24,W,8e24c0f5-7a45-3a1d-88e2-570b83626561,Jim Wolf,158,catcher,661388,William Contreras,False,False,0.07521076178932053,9,top,0,0,Ball
 849802,2026-10-24,W,b9ed66b1-1846-3631-bbda-2781f7aeae39,Jim Wolf,139,batter,683748,Victor Mesa Jr.,True,False,0.08877719229137337,9,top,0,0,Strike
 849802,2026-10-24,W,138dcc11-4403-3d85-b27c-f3be131222ef,Jim Wolf,139,catcher,663743,Nick Fortes,False,True,0.018548787964171698,8,bottom,0,0,Strike
+849804,2026-10-26,W,1d709fe7-2df3-323e-a1a9-25737bb415be,Nic Lentz,139,catcher,663743,Nick Fortes,False,False,0.08565588077763843,1,top,1,0,Ball
+849804,2026-10-26,W,4035388c-e66f-369d-b466-ffb232181e94,Nic Lentz,139,catcher,663743,Nick Fortes,False,True,0.06194595537578962,6,top,3,2,Strike
+849804,2026-10-26,W,82961c7a-d930-3bbf-a840-f24f110a499b,Nic Lentz,139,catcher,663743,Nick Fortes,False,True,0.07610880085840943,7,top,0,0,Strike
+849804,2026-10-26,W,f314f95a-6efa-38a6-98c1-5ad3f8264852,Nic Lentz,139,catcher,663743,Nick Fortes,False,True,0.04595254298324036,9,top,0,0,Strike
+849804,2026-10-26,W,a7e2d4d5-54d4-3c70-9e0e-bf288bdda71f,Nic Lentz,158,catcher,661388,William Contreras,False,True,0.0464349345651307,3,bottom,1,1,Strike
+849804,2026-10-26,W,83ba0f0d-27ee-3e33-828d-bc6792fef651,Nic Lentz,158,catcher,661388,William Contreras,False,True,0.03989452681483496,4,bottom,2,2,Strike
+849804,2026-10-26,W,a3b042a8-3d6f-3d34-9c53-a49342dbd8af,Nic Lentz,158,catcher,661388,William Contreras,False,True,0.10567890689814274,5,bottom,0,1,Strike
+849804,2026-10-26,W,1cc2c7b7-c48b-35be-9097-ce1925960147,Nic Lentz,158,catcher,661388,William Contreras,False,True,0.023086541034825547,6,bottom,0,1,Strike
