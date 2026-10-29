@@ -10739,3 +10739,5 @@ game_pk,date,game_type,play_id,hp_umpire,challenge_team_id,challenger_type,chall
 849803,2026-10-27,W,7e4f2450-a6d1-3e16-82db-72e0dfe7663d,James Hoye,139,batter,670764,Taylor Walls,True,True,0.2137653991045907,8,bottom,2,1,Ball
 849803,2026-10-27,W,69ba93d6-8a52-37bf-a003-af8e9da146d4,James Hoye,158,catcher,661388,William Contreras,False,True,0.10126610064968489,9,bottom,0,1,Strike
 849803,2026-10-27,W,178d6bcf-01d7-3293-b0ce-b39cd10b0799,James Hoye,158,catcher,661388,William Contreras,False,False,0.006361906093617212,11,bottom,0,0,Ball
+849799,2026-10-28,W,6ba61658-5a58-334a-a093-b5c0865e06c8,Vic Carapazza,139,catcher,689414,Liam Hicks,False,True,0.03905675246806384,7,top,0,0,Strike
+849799,2026-10-28,W,d63946f2-3b59-3b5f-8050-cec5cb1523d6,Vic Carapazza,158,catcher,661388,William Contreras,False,True,0.1346923760816865,5,bottom,0,1,Strike
